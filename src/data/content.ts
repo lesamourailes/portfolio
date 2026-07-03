@@ -129,7 +129,7 @@ export type Community = { title: L; detail: L; period: string };
 
 export const communities: Community[] = [
   {
-    title: { ru: 'ProductCamp Russia & EE', en: 'ProductCamp' },
+    title: { ru: 'ProductCamp', en: 'ProductCamp' },
     detail: { ru: 'Участник сообщества; эксперт Карьерного трека', en: 'Community member; expert of the Career Track' },
     period: '2025',
   },
@@ -172,27 +172,27 @@ export const media: MediaItem[] = [
     url: 'https://www.tadviser.ru/index.php/%D0%9F%D0%B5%D1%80%D1%81%D0%BE%D0%BD%D0%B0:%D0%9C%D0%B0%D1%80%D0%BA%D0%B0%D1%80%D1%8F%D0%BD_%D0%90%D1%80%D1%82%D1%83%D1%80_%D0%A0%D1%83%D0%B1%D0%B5%D0%BD%D0%BE%D0%B2%D0%B8%D1%87',
   },
   {
-    title: { ru: 'Боржоми внедряет нейросеть для работы с ритейлом — первый Image Recognition в РФ', en: 'Borjomi deploys a neural network for retail — the first image recognition in the country' },
+    title: { ru: 'Боржоми внедряет нейросеть - первый Image Recognition в стране', en: 'Borjomi deploys a neural network — the first image recognition in the country' },
     source: 'CNews', year: '2018', kind: 'press',
     url: 'https://www.cnews.ru/news/line/2018-11-27_borzhomi_vnedryaet_nejroset_dlya_raboty_s_ritejlom',
   },
   {
-    title: { ru: 'Открытие конференции SysTech Family Area 2018 (спикер)', en: 'Opening of SysTech Family Area 2018 (speaker)' },
+    title: { ru: 'Открытие конференции SysTech Family Area 2018', en: 'Opening of SysTech Family Area 2018' },
     source: 'sys4tec.com', year: '2018', kind: 'speaking',
     url: 'https://sys4tec.com/company/press_center/news/otkrytie-konferencii-systech-family-area-2018/',
   },
   {
-    title: { ru: 'Системные технологии: SFA 2019 — подарки и вызовы цифровой экономики (спикер)', en: 'System Technologies: SFA 2019 — gifts and challenges of the digital economy (speaker)' },
+    title: { ru: 'Системные технологии: SFA 2019: вызовы цифровой экономики', en: 'System Technologies: SFA 2019: challenges of the digital economy' },
     source: 'Retail.ru', year: '2019', kind: 'speaking',
     url: 'https://www.retail.ru/rbc/pressreleases/sistemnye-tekhnologii-sfa-2019-podarki-i-vyzovy-tsifrovoy-ekonomiki/',
   },
   {
-    title: { ru: 'Кейс Borjomi: история успеха с SM Visor', en: 'Borjomi case: a success story with SM Visor' },
+    title: { ru: 'Кейс Borjomi: история успеха', en: 'Borjomi case: a success story' },
     source: 'SmartMerch', year: '', kind: 'press',
     url: 'https://smartmerch.it/blog/one-of-our-first-clients-the-borjomi-success-story-with-sm-visor/',
   },
   {
-    title: { ru: 'TAdviser: IT Retail Day 2025 (выступление)', en: 'TAdviser: IT Retail Day 2025 (talk)' },
+    title: { ru: 'TAdviser: IT Retail Day 2025', en: 'TAdviser: IT Retail Day 2025' },
     source: 'TAdviser', year: '2025', kind: 'speaking',
     url: 'https://www.tadviser.ru/index.php/%D0%A1%D1%82%D0%B0%D1%82%D1%8C%D1%8F:TAdviser:_IT_Retail_Day_2025',
   },

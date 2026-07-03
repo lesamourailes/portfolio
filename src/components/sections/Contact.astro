@@ -31,12 +31,9 @@ const items = [
 
       <div class="contact__grid">
         {items.map((it) => (
-          <a class="contact__item" href={it.href} target={it.href.startsWith('mailto') ? undefined : '_blank'} rel="noopener">
+          <a class="contact__item" href={it.href} title={it.value} target={it.href.startsWith('mailto') ? undefined : '_blank'} rel="noopener">
             <span class="contact__icon" set:html={it.icon} aria-hidden="true"></span>
-            <span class="contact__meta">
-              <span class="contact__label">{it.label}</span>
-              <span class="contact__value">{it.value}</span>
-            </span>
+            <span class="contact__label">{it.label}</span>
             <svg class="contact__go" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"></path></svg>
           </a>
         ))}
@@ -66,9 +63,7 @@ const items = [
     width: 44px; height: 44px; border-radius: 12px;
     background: var(--accent-soft); color: var(--accent);
   }
-  .contact__meta { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
-  .contact__label { font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-muted); }
-  .contact__value { font-weight: 600; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .contact__label { font-size: 16px; font-weight: 600; color: var(--text); }
   .contact__go { flex: none; margin-left: auto; color: var(--text-muted); transition: color 0.2s ease, transform 0.2s ease; }
   .contact__item:hover .contact__go { color: var(--accent); transform: translate(2px, -2px); }
 
