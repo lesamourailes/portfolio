@@ -25,10 +25,6 @@ const base = locale === 'en' ? '/en' : '';
         <img src="/portrait.jpg" alt={t(profile.name, locale)} loading="eager" onerror="this.style.display='none';this.parentElement.classList.add('portrait--fallback')" />
         <span class="portrait__mono" aria-hidden="true">AM</span>
       </div>
-      <div class="portrait__badge">
-        <span class="portrait__dot"></span>
-        {locale === 'ru' ? 'Открыт к предложениям' : 'Open to opportunities'}
-      </div>
     </div>
   </div>
 

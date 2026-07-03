@@ -4,12 +4,12 @@ export type L = Record<Locale, string>;
 export const profile = {
   name: { ru: 'Артур Маркарян', en: 'Artur Markarian' },
   role: {
-    ru: 'Head of Product · Senior Product Manager',
-    en: 'Head of Product · Senior Product Manager',
+    ru: 'Head of Product',
+    en: 'Head of Product',
   },
   tagline: {
-    ru: 'Строю продукты, которые влияют на миллионы',
-    en: 'I build products that reach millions',
+    ru: 'Создаю продукты, которые меняют мир',
+    en: 'I create products that change the world',
   },
   summary: {
     ru: '9+ лет в продуктовом менеджменте. От FMCG-гиганта до IT-стартапов: запускаю продукты с измеримым эффектом — рост выручки, миллионы пользователей и первые в стране технологические внедрения.',
@@ -27,9 +27,9 @@ export const contacts = {
 
 export const stats: { value: string; label: L }[] = [
   { value: '9+', label: { ru: 'лет в продукте', en: 'years in product' } },
-  { value: '1M+', label: { ru: 'MAU продукта «Моя смена»', en: 'MAU at My Shift' } },
-  { value: '+82%', label: { ru: 'рост MRR в SmartMerch', en: 'MRR growth at SmartMerch' } },
-  { value: '245M', label: { ru: 'изображений в год · #1 в РФ, #2 в мире', en: 'images per year · #1 in RU, #2 worldwide' } },
+  { value: '1M+', label: { ru: 'max MAU продукта', en: 'max product MAU' } },
+  { value: '25', label: { ru: 'стран мира', en: 'countries worldwide' } },
+  { value: '2019', label: { ru: 'проект года', en: 'project of the year' } },
 ];
 
 export const about = {
@@ -46,7 +46,7 @@ export const about = {
 };
 
 export type Experience = {
-  company: string;
+  company: L;
   period: L;
   role: L;
   location: L;
@@ -57,7 +57,7 @@ export type Experience = {
 
 export const experience: Experience[] = [
   {
-    company: 'Моя смена',
+    company: { ru: 'Моя смена', en: 'My shifts LLC' },
     period: { ru: '2025 — настоящее время', en: '2025 — present' },
     role: { ru: 'Head of Product / Senior Product Manager', en: 'Head of Product / Senior Product Manager' },
     location: { ru: 'Москва, Россия', en: 'Moscow, Russia' },
@@ -74,7 +74,7 @@ export const experience: Experience[] = [
     tags: ['Product strategy', 'Unit-economics', 'Marketplace', 'C-level alignment'],
   },
   {
-    company: 'SmartMerch',
+    company: { ru: 'SmartMerch', en: 'SmartMerch LLC' },
     period: { ru: '2021 — 2025', en: '2021 — 2025' },
     role: { ru: 'Head of Product', en: 'Head of Product' },
     location: { ru: 'Россия / международные рынки', en: 'Russia / international markets' },
@@ -91,7 +91,7 @@ export const experience: Experience[] = [
     tags: ['SaaS', 'IoT', 'AI/ML', 'Computer Vision', 'P&L', 'Scale'],
   },
   {
-    company: 'IDS Borjomi',
+    company: { ru: 'IDS Borjomi', en: 'IDS Borjomi LLC' },
     period: { ru: '2016 — 2021', en: '2016 — 2021' },
     role: { ru: 'Product Owner / IT Business Partner', en: 'Product Owner / IT Business Partner' },
     location: { ru: 'Россия, Украина, Беларусь', en: 'Russia, Ukraine, Belarus' },

@@ -17,7 +17,7 @@ const { locale } = Astro.props;
         <article class="exp__card reveal">
           <div class="exp__head">
             <div>
-              <h3 class="exp__company">{job.company}</h3>
+              <h3 class="exp__company">{t(job.company, locale)}</h3>
               <p class="exp__role">{t(job.role, locale)}</p>
             </div>
             <div class="exp__meta">
