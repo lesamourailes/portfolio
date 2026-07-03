@@ -8,14 +8,13 @@ export const profile = {
     en: 'Head of Product',
   },
   tagline: {
-    ru: 'Создаю продукты, которые меняют мир',
-    en: 'I create products that change the world',
+    ru: { lead: 'Создаю продукты, ', accent: 'которые меняют мир' },
+    en: { lead: 'I create products ', accent: 'that change the world' },
   },
   summary: {
     ru: '9+ лет в продуктовом менеджменте. От FMCG-гиганта до IT-стартапов: запускаю продукты с измеримым эффектом — рост выручки, миллионы пользователей и первые в стране технологические внедрения.',
     en: '9+ years in product management. From an FMCG leader to IT startups — I launch products with measurable impact: revenue growth, millions of users, and country-first tech rollouts.',
   },
-  location: { ru: 'Москва · открыт к релокации / remote', en: 'Moscow · open to relocation / remote' },
 };
 
 export const contacts = {
@@ -40,7 +39,7 @@ export const about = {
     ],
     en: [
       'Head of Product with 9+ years of experience and hands-on leadership of teams of 3–5. I take products through the full cycle — from research and unit economics to launch, scale, and P&L ownership.',
-      'Key achievements: every 20th chocolate bar produced in Russia passes quality control on hardware and software designed under my lead; a gig-work platform built with market leader hh.ru reaching 1M+ MAU; and the first industrial rollout of shelf image recognition in the FMCG sector in Russia.',
+      'Key achievements: every 20th chocolate bar produced in the country passes quality control on hardware and software designed under my lead; a gig-work platform built with market leader hh.ru reaching 1M+ MAU; and the first industrial rollout of shelf image recognition in the FMCG sector in the country.',
     ],
   },
 };
@@ -59,8 +58,8 @@ export const experience: Experience[] = [
   {
     company: { ru: 'Моя смена', en: 'My shifts LLC' },
     period: { ru: '2025 — настоящее время', en: '2025 — present' },
-    role: { ru: 'Head of Product / Senior Product Manager', en: 'Head of Product / Senior Product Manager' },
-    location: { ru: 'Москва, Россия', en: 'Moscow, Russia' },
+    role: { ru: 'Head of Product', en: 'Head of Product' },
+    location: { ru: 'Москва, Россия', en: 'Moscow' },
     summary: {
       ru: 'Запуск интеграционного продукта по подработке совместно с лидером рынка hh.ru (аналог Indeed Flex), MAU 1M+.',
       en: 'Launched an integration gig-work product together with market leader hh.ru (analogue of Indeed Flex), 1M+ MAU.',
@@ -77,15 +76,15 @@ export const experience: Experience[] = [
     company: { ru: 'SmartMerch', en: 'SmartMerch LLC' },
     period: { ru: '2021 — 2025', en: '2021 — 2025' },
     role: { ru: 'Head of Product', en: 'Head of Product' },
-    location: { ru: 'Россия / международные рынки', en: 'Russia / international markets' },
+    location: { ru: 'Россия / международные рынки', en: 'Domestic / international markets' },
     summary: {
       ru: 'Развил линейку с 1 до 6 продуктов (4 SaaS, 2 IoT). 22 тыс. DAU, 25 стран, 245 млн изображений в год — #1 в России и #2 в мире.',
-      en: 'Grew the portfolio from 1 to 6 products (4 SaaS, 2 IoT). 22K DAU, 25 countries, 245M images per year — #1 in Russia and #2 worldwide.',
+      en: 'Grew the portfolio from 1 to 6 products (4 SaaS, 2 IoT). 22K DAU, 25 countries, 245M images per year — #1 in the country and #2 worldwide.',
     },
     highlights: [
       { ru: '+82% MRR (до 35% на клиента) за счёт 3 новых УТП-фич. Рост MAU на 50% и NPS с 30 до 50.', en: '+82% MRR (up to 35% per customer) via 3 new USP features. MAU up 50%, NPS from 30 to 50.' },
       { ru: 'SM Pulse: запустил и масштабировал AI-агента на 1000+ пользователей — 12% выручки разово и 18% MRR клиента.', en: 'SM Pulse: launched and scaled an AI agent to 1,000+ users — 12% of revenue at once and 18% of the client’s MRR.' },
-      { ru: 'AI-контроль качества: система проверки готовой продукции — каждая 20-я шоколадка в России тестируется на ней.', en: 'AI quality control: a finished-goods inspection system — every 20th chocolate bar in Russia is tested on it.' },
+      { ru: 'AI-контроль качества: система проверки готовой продукции — каждая 20-я шоколадка в России тестируется на ней.', en: 'AI quality control: a finished-goods inspection system — every 20th chocolate bar in the country is tested on it.' },
       { ru: 'Модульная и кросс-клиентская разработка сократила time-to-market на 70%.', en: 'Modular, cross-client development cut time-to-market by 70%.' },
     ],
     tags: ['SaaS', 'IoT', 'AI/ML', 'Computer Vision', 'P&L', 'Scale'],
@@ -94,13 +93,13 @@ export const experience: Experience[] = [
     company: { ru: 'IDS Borjomi', en: 'IDS Borjomi LLC' },
     period: { ru: '2016 — 2021', en: '2016 — 2021' },
     role: { ru: 'Product Owner / IT Business Partner', en: 'Product Owner / IT Business Partner' },
-    location: { ru: 'Россия, Украина, Беларусь', en: 'Russia, Ukraine, Belarus' },
+    location: { ru: 'Россия, Украина, Беларусь', en: 'Domestic, Ukraine, Belarus' },
     summary: {
       ru: 'Трансформировал продажи и операции за счёт модернизации IT-портфеля. Первым в FMCG запустил Image Recognition в промышленную эксплуатацию.',
       en: 'Transformed sales and operations by modernizing the IT portfolio. First in FMCG to bring shelf image recognition into industrial use.',
     },
     highlights: [
-      { ru: 'Запустил SFA, BI-аналитику и AI Image Recognition (первым в FMCG в России).', en: 'Launched SFA, BI analytics and AI image recognition (first in FMCG in Russia).' },
+      { ru: 'Запустил SFA, BI-аналитику и AI Image Recognition (первым в FMCG в России).', en: 'Launched SFA, BI analytics and AI image recognition (first in FMCG in the country).' },
       { ru: 'Импакт: −7% затрат на ФОТ, ×2.5 скорость принятия решений через DWH/BI, +4% выручки.', en: 'Impact: −7% payroll costs, ×2.5 faster executive decisions via DWH/BI, +4% revenue.' },
       { ru: 'Спикер GlobalCIO и SysTech, номинант «Проект года 2019».', en: 'Speaker at GlobalCIO and SysTech; nominee for “Project of the Year 2019”.' },
       { ru: 'Масштабировал внедрённые IT-решения в Украине и Беларуси. Карьерный рост из sales (2012–2019).', en: 'Scaled deployed IT solutions to Ukraine and Belarus. Grew from a sales career (2012–2019).' },
@@ -173,7 +172,7 @@ export const media: MediaItem[] = [
     url: 'https://www.tadviser.ru/index.php/%D0%9F%D0%B5%D1%80%D1%81%D0%BE%D0%BD%D0%B0:%D0%9C%D0%B0%D1%80%D0%BA%D0%B0%D1%80%D1%8F%D0%BD_%D0%90%D1%80%D1%82%D1%83%D1%80_%D0%A0%D1%83%D0%B1%D0%B5%D0%BD%D0%BE%D0%B2%D0%B8%D1%87',
   },
   {
-    title: { ru: 'Боржоми внедряет нейросеть для работы с ритейлом — первый Image Recognition в РФ', en: 'Borjomi deploys a neural network for retail — the first image recognition in Russia' },
+    title: { ru: 'Боржоми внедряет нейросеть для работы с ритейлом — первый Image Recognition в РФ', en: 'Borjomi deploys a neural network for retail — the first image recognition in the country' },
     source: 'CNews', year: '2018', kind: 'press',
     url: 'https://www.cnews.ru/news/line/2018-11-27_borzhomi_vnedryaet_nejroset_dlya_raboty_s_ritejlom',
   },

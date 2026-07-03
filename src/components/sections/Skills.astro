@@ -17,7 +17,7 @@ const { locale } = Astro.props;
         <div class="skills__group reveal">
           <h3 class="skills__title">{t(group.title, locale)}</h3>
           <div class="skills__items">
-            {group.items.map((s) => <span class="tag">{s}</span>)}
+            {group.items.filter((s) => !(locale === 'en' && s === 'Яндекс.Метрика')).map((s) => <span class="tag">{s}</span>)}
           </div>
         </div>
       ))}
