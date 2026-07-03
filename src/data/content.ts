@@ -76,7 +76,7 @@ export const experience: Experience[] = [
     company: { ru: 'SmartMerch', en: 'SmartMerch LLC' },
     period: { ru: '2021 — 2025', en: '2021 — 2025' },
     role: { ru: 'Head of Product', en: 'Head of Product' },
-    location: { ru: 'Россия / международные рынки', en: 'Domestic / international markets' },
+    location: { ru: 'Россия / международные рынки', en: 'International markets' },
     summary: {
       ru: 'Развил линейку с 1 до 6 продуктов (4 SaaS, 2 IoT). 22 тыс. DAU, 25 стран, 245 млн изображений в год — #1 в России и #2 в мире.',
       en: 'Grew the portfolio from 1 to 6 products (4 SaaS, 2 IoT). 22K DAU, 25 countries, 245M images per year — #1 in the country and #2 worldwide.',
@@ -93,7 +93,7 @@ export const experience: Experience[] = [
     company: { ru: 'IDS Borjomi', en: 'IDS Borjomi LLC' },
     period: { ru: '2016 — 2021', en: '2016 — 2021' },
     role: { ru: 'Product Owner / IT Business Partner', en: 'Product Owner / IT Business Partner' },
-    location: { ru: 'Россия, Украина, Беларусь', en: 'Domestic, Ukraine, Belarus' },
+    location: { ru: 'Россия, Украина, Беларусь', en: 'International markets' },
     summary: {
       ru: 'Трансформировал продажи и операции за счёт модернизации IT-портфеля. Первым в FMCG запустил Image Recognition в промышленную эксплуатацию.',
       en: 'Transformed sales and operations by modernizing the IT portfolio. First in FMCG to bring shelf image recognition into industrial use.',
@@ -129,18 +129,18 @@ export type Community = { title: L; detail: L; period: string };
 
 export const communities: Community[] = [
   {
-    title: { ru: 'ProductCamp Russia & EE', en: 'ProductCamp Russia & EE' },
-    detail: { ru: 'Участник сообщества; эксперт Карьерного трека (2025)', en: 'Community member; expert of the Career Track (2025)' },
+    title: { ru: 'ProductCamp Russia & EE', en: 'ProductCamp' },
+    detail: { ru: 'Участник сообщества; эксперт Карьерного трека', en: 'Community member; expert of the Career Track' },
     period: '2025',
   },
   {
-    title: { ru: 'GlobalCIO — Ассоциация ИТ-директоров России', en: 'GlobalCIO — Association of IT Directors of Russia' },
-    detail: { ru: 'Член ассоциации, спикер отраслевых конференций', en: 'Member of the association, speaker at industry conferences' },
+    title: { ru: 'GlobalCIO — Ассоциация ИТ-директоров России', en: 'GlobalCIO. Association of IT Leaders' },
+    detail: { ru: 'Член ассоциации, спикер отраслевых конференций', en: 'Member & speaker at industry conferences' },
     period: '2018',
   },
   {
-    title: { ru: '«Хакатоны России 2026»', en: '“Hackathons of Russia 2026”' },
-    detail: { ru: 'Член экспертного совета жюри национальной премии', en: 'Member of the expert jury council of the national award' },
+    title: { ru: 'Хакатоны России', en: 'International hackathons award' },
+    detail: { ru: 'Член экспертного совета жюри национальной премии', en: 'Member of the expert jury council' },
     period: '2026',
   },
   {
@@ -218,8 +218,8 @@ export const portfolio: PortfolioItem[] = [];
 export type Certificate = { src: string; title: L; issuer: L; year: string };
 
 export const certificates: Certificate[] = [
-  { src: '/certificates/productcamp-2025.png', title: { ru: 'ProductCamp 2025 — эксперт Карьерного трека', en: 'ProductCamp 2025 — Career Track expert' }, issuer: { ru: 'ProductCamp Russia & EE', en: 'ProductCamp Russia & EE' }, year: '2025' },
-  { src: '/certificates/productcamp-2026.jpg', title: { ru: 'ProductCamp 2026', en: 'ProductCamp 2026' }, issuer: { ru: 'ProductCamp Russia & EE', en: 'ProductCamp Russia & EE' }, year: '2026' },
+  { src: '/certificates/productcamp-2025.png', title: { ru: 'ProductCamp 2025 — эксперт Карьерного трека', en: 'ProductCamp 2025 — Career Track expert' }, issuer: { ru: 'ProductCamp Russia & EE', en: 'ProductCamp' }, year: '2025' },
+  { src: '/certificates/productcamp-2026.jpg', title: { ru: 'ProductCamp 2026', en: 'ProductCamp 2026' }, issuer: { ru: 'ProductCamp Russia & EE', en: 'ProductCamp' }, year: '2026' },
   { src: '/certificates/pm-in-it.jpg', title: { ru: 'Project Management in IT', en: 'Project Management in IT' }, issuer: { ru: 'Binary District · Digital October', en: 'Binary District · Digital October' }, year: '2019' },
   { src: '/certificates/itil.png', title: { ru: 'ITIL Foundation', en: 'ITIL Foundation' }, issuer: { ru: 'ITIL', en: 'ITIL' }, year: '' },
   { src: '/certificates/pm-skills-test-1.jpg', title: { ru: 'Тест навыков продакт-менеджера (ч.1)', en: 'Product manager skills test (pt.1)' }, issuer: { ru: 'Skills assessment', en: 'Skills assessment' }, year: '' },

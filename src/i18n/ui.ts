@@ -25,7 +25,7 @@ export const ui = {
     education: { ru: 'Образование', en: 'Education' },
     portfolio: { ru: 'Портфолио', en: 'Portfolio' },
     communities: { ru: 'Ассоциации', en: 'Associations' },
-    media: { ru: 'СМИ обо мне', en: 'In the media' },
+    media: { ru: 'СМИ обо мне', en: 'Media' },
     certificates: { ru: 'Сертификаты', en: 'Certificates' },
     contact: { ru: 'Контакты', en: 'Contact' },
   },
