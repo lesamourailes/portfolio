@@ -19,7 +19,7 @@ const items = byYearDesc(certificates, (c) => c.year);
           <div class="cert__thumb"><img src={c.src} alt={t(c.title, locale)} loading="lazy" /></div>
           <div class="cert__info">
             <span class="cert__title">{t(c.title, locale)}</span>
-            <span class="cert__issuer">{t(c.issuer, locale)}{c.year ? ` · ${c.year}` : ''}</span>
+            <span class="cert__issuer">{[t(c.issuer, locale), c.year].filter(Boolean).join(' · ')}</span>
           </div>
         </button>
       ))}

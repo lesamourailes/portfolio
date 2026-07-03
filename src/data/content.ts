@@ -218,15 +218,15 @@ export const portfolio: PortfolioItem[] = [];
 export type Certificate = { src: string; title: L; issuer: L; year: string };
 
 export const certificates: Certificate[] = [
-  { src: '/certificates/productcamp-2025.png', title: { ru: 'ProductCamp 2025 — эксперт Карьерного трека', en: 'ProductCamp 2025 — Career Track expert' }, issuer: { ru: 'ProductCamp Russia & EE', en: 'ProductCamp' }, year: '2025' },
-  { src: '/certificates/productcamp-2026.jpg', title: { ru: 'ProductCamp 2026', en: 'ProductCamp 2026' }, issuer: { ru: 'ProductCamp Russia & EE', en: 'ProductCamp' }, year: '2026' },
-  { src: '/certificates/pm-in-it.jpg', title: { ru: 'Project Management in IT', en: 'Project Management in IT' }, issuer: { ru: 'Binary District · Digital October', en: 'Binary District · Digital October' }, year: '2019' },
-  { src: '/certificates/itil.png', title: { ru: 'ITIL Foundation', en: 'ITIL Foundation' }, issuer: { ru: 'ITIL', en: 'ITIL' }, year: '' },
-  { src: '/certificates/pm-skills-test-1.jpg', title: { ru: 'Тест навыков продакт-менеджера (ч.1)', en: 'Product manager skills test (pt.1)' }, issuer: { ru: 'Skills assessment', en: 'Skills assessment' }, year: '' },
-  { src: '/certificates/pm-skills-test-2.jpg', title: { ru: 'Тест навыков продакт-менеджера (ч.2)', en: 'Product manager skills test (pt.2)' }, issuer: { ru: 'Skills assessment', en: 'Skills assessment' }, year: '' },
-  { src: '/certificates/dev-basics.jpg', title: { ru: 'Основы программирования и баз данных', en: 'Programming and databases fundamentals' }, issuer: { ru: '«Специалист» при МГТУ им. Баумана', en: 'Specialist Center at Bauman MSTU' }, year: '2015' },
-  { src: '/certificates/java-se8-l1.jpg', title: { ru: 'Java SE 8. Уровень 1', en: 'Java SE 8. Level 1' }, issuer: { ru: '«Специалист» при МГТУ им. Баумана', en: 'Specialist Center at Bauman MSTU' }, year: '2015' },
-  { src: '/certificates/java-se8-l2.jpg', title: { ru: 'Java SE. Уровень 2', en: 'Java SE. Level 2' }, issuer: { ru: '«Специалист» при МГТУ им. Баумана', en: 'Specialist Center at Bauman MSTU' }, year: '2015' },
-  { src: '/certificates/lambda.png', title: { ru: 'Лямбда-выражения в Java 8', en: 'Lambda expressions in Java 8' }, issuer: { ru: '«Специалист» при МГТУ им. Баумана', en: 'Specialist Center at Bauman MSTU' }, year: '2016' },
-  { src: '/certificates/c-lang.jpg', title: { ru: 'Язык программирования C', en: 'C programming language' }, issuer: { ru: '«Специалист» при МГТУ им. Баумана', en: 'Specialist Center at Bauman MSTU' }, year: '' },
+  { src: '/certificates/productcamp-2026.jpg', title: { ru: 'ProductCamp', en: 'ProductCamp' }, issuer: { ru: 'Благодарственное письмо', en: 'Letter of appreciation' }, year: '2026' },
+  { src: '/certificates/pm-skills-test-1.jpg', title: { ru: 'Certificate', en: 'Certificate' }, issuer: { ru: '', en: '' }, year: '2026' },
+  { src: '/certificates/pm-skills-test-2.jpg', title: { ru: 'Certificate', en: 'Certificate' }, issuer: { ru: '', en: '' }, year: '2026' },
+  { src: '/certificates/productcamp-2025.png', title: { ru: 'ProductCamp', en: 'ProductCamp' }, issuer: { ru: 'Благодарственное письмо', en: 'Letter of appreciation' }, year: '2025' },
+  { src: '/certificates/pm-in-it.jpg', title: { ru: 'Project Management in IT', en: 'Project Management in IT' }, issuer: { ru: 'Binary District', en: 'Binary District' }, year: '2019' },
+  { src: '/certificates/itil.png', title: { ru: 'Повышение квалификации', en: 'Professional development' }, issuer: { ru: 'ITIL Foundation', en: 'ITIL Foundation' }, year: '2018' },
+  { src: '/certificates/dev-basics.jpg', title: { ru: 'Основы программирования', en: 'Programming fundamentals' }, issuer: { ru: 'МГТУ им. Баумана', en: 'Bauman MSTU' }, year: '2016' },
+  { src: '/certificates/java-se8-l1.jpg', title: { ru: 'Java SE 8. Уровень 1', en: 'Java SE 8. Level 1' }, issuer: { ru: 'МГТУ им. Баумана', en: 'Bauman MSTU' }, year: '2016' },
+  { src: '/certificates/java-se8-l2.jpg', title: { ru: 'Java SE. Уровень 2', en: 'Java SE. Level 2' }, issuer: { ru: 'МГТУ им. Баумана', en: 'Bauman MSTU' }, year: '2016' },
+  { src: '/certificates/lambda.png', title: { ru: 'Лямбда-выражения в Java 8', en: 'Lambda expressions in Java 8' }, issuer: { ru: 'МГТУ им. Баумана', en: 'Bauman MSTU' }, year: '2016' },
+  { src: '/certificates/c-lang.jpg', title: { ru: 'Язык программирования C', en: 'C programming language' }, issuer: { ru: 'МГТУ им. Баумана', en: 'Bauman MSTU' }, year: '2015' },
 ];
