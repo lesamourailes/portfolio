@@ -113,7 +113,7 @@ export type SkillGroup = { title: L; items: string[] };
 export const skills: SkillGroup[] = [
   {
     title: { ru: 'Продукт и стратегия', en: 'Product & strategy' },
-    items: ['Product strategy', 'P&L', 'Road mapping', 'Strategic & risk planning', 'Product launch', 'Change management', 'Prioritization (RICE, MoSCoW)', 'CJM', 'JTBD', 'A/B-testing'],
+    items: ['Product strategy', 'P&L', 'JTBD', 'Road mapping', 'Change management', 'Strategic & risk planning', 'Product launch'],
   },
   {
     title: { ru: 'Soft skills', en: 'Soft skills' },
