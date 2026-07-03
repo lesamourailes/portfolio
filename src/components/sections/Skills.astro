@@ -26,8 +26,9 @@ const { locale } = Astro.props;
 </section>
 
 <style>
-  .skills { margin-top: 44px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .skills { margin-top: 44px; display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; align-items: start; }
   .skills__group { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 28px; }
+  .skills__group:first-child { grid-column: 1 / -1; }
   .skills__title { font-size: 17px; margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid var(--border); }
   .skills__items { display: flex; flex-wrap: wrap; gap: 8px; }
   .skills__group .tag { background: var(--bg); }
