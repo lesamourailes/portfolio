@@ -107,4 +107,10 @@ const links = [
   const onScroll = () => header?.classList.toggle('is-scrolled', window.scrollY > 8);
   onScroll();
   window.addEventListener('scroll', onScroll, { passive: true });
+
+  const langLink = header?.querySelector('.lang');
+  langLink?.addEventListener('click', () => {
+    const target = langLink.getAttribute('href')?.startsWith('/en') ? 'en' : 'ru';
+    try { localStorage.setItem('lang', target); } catch (e) {}
+  });
 </script>
