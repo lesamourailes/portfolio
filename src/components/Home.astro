@@ -1,0 +1,23 @@
+---
+import Hero from './sections/Hero.astro';
+import About from './sections/About.astro';
+import Experience from './sections/Experience.astro';
+import Skills from './sections/Skills.astro';
+import Portfolio from './sections/Portfolio.astro';
+import Communities from './sections/Communities.astro';
+import Media from './sections/Media.astro';
+import Certificates from './sections/Certificates.astro';
+import Contact from './sections/Contact.astro';
+import type { Locale } from '../data/content';
+interface Props { locale: Locale; }
+const { locale } = Astro.props;
+---
+<Hero locale={locale} />
+<About locale={locale} />
+<Experience locale={locale} />
+<Skills locale={locale} />
+<Portfolio locale={locale} />
+<Communities locale={locale} />
+<Media locale={locale} />
+<Certificates locale={locale} />
+<Contact locale={locale} />

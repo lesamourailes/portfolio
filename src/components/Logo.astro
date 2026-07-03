@@ -1,0 +1,23 @@
+---
+interface Props { href?: string; }
+const { href = '/' } = Astro.props;
+---
+<a class="logo" href={href} aria-label="Artur Markarian">
+  <span class="logo__a">A</span><span class="logo__m">M</span>
+</a>
+
+<style>
+  .logo {
+    display: inline-flex;
+    align-items: baseline;
+    font-weight: 800;
+    font-size: 26px;
+    letter-spacing: -0.05em;
+    line-height: 1;
+    position: relative;
+  }
+  .logo__a { color: var(--text); transition: color 0.25s ease; }
+  .logo__m { color: var(--accent); transition: color 0.25s ease; }
+  .logo:hover .logo__a { color: var(--accent); }
+  .logo:hover .logo__m { color: var(--text); }
+</style>

@@ -1,0 +1,68 @@
+---
+import { experience } from '../../data/content';
+import { ui, t } from '../../i18n/ui';
+import type { Locale } from '../../data/content';
+interface Props { locale: Locale; }
+const { locale } = Astro.props;
+---
+<section class="section" id="experience">
+  <div class="container">
+    <div class="reveal">
+      <span class="eyebrow">{t(ui.sections.experience, locale)}</span>
+      <h2 class="section-title">{locale === 'ru' ? 'Продукты и результаты' : 'Products & results'}</h2>
+    </div>
+
+    <div class="exp">
+      {experience.map((job) => (
+        <article class="exp__card reveal">
+          <div class="exp__head">
+            <div>
+              <h3 class="exp__company">{job.company}</h3>
+              <p class="exp__role">{t(job.role, locale)}</p>
+            </div>
+            <div class="exp__meta">
+              <span class="exp__period">{t(job.period, locale)}</span>
+              <span class="exp__location">{t(job.location, locale)}</span>
+            </div>
+          </div>
+          <p class="exp__summary">{t(job.summary, locale)}</p>
+          <ul class="exp__highlights">
+            {job.highlights.map((h) => <li>{t(h, locale)}</li>)}
+          </ul>
+          <div class="exp__tags">
+            {job.tags.map((tag) => <span class="tag">{tag}</span>)}
+          </div>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .exp { margin-top: 48px; display: flex; flex-direction: column; gap: 24px; }
+  .exp__card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 34px; transition: border-color 0.25s ease, transform 0.25s ease; }
+  .exp__card:hover { border-color: var(--border-strong); }
+
+  .exp__head { display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; align-items: baseline; }
+  .exp__company { font-size: 26px; letter-spacing: -0.02em; }
+  .exp__role { margin-top: 4px; font-weight: 600; color: var(--accent); font-size: 16px; }
+  .exp__meta { display: flex; flex-direction: column; text-align: right; gap: 2px; }
+  .exp__period { font-weight: 600; font-size: 15px; }
+  .exp__location { font-size: 14px; color: var(--text-muted); }
+
+  .exp__summary { margin-top: 18px; font-size: 18px; }
+  .exp__highlights { margin: 20px 0 0; padding: 0; list-style: none; display: grid; gap: 12px; }
+  .exp__highlights li { position: relative; padding-left: 26px; color: var(--text-muted); line-height: 1.5; }
+  .exp__highlights li::before {
+    content: ''; position: absolute; left: 4px; top: 9px;
+    width: 8px; height: 8px; border-radius: 50%; background: var(--accent);
+  }
+  .exp__tags { margin-top: 22px; display: flex; flex-wrap: wrap; gap: 8px; }
+
+  @media (max-width: 640px) {
+    .exp__card { padding: 24px; }
+    .exp__meta { text-align: left; }
+    .exp__company { font-size: 22px; }
+    .exp__summary { font-size: 16px; }
+  }
+</style>

@@ -1,0 +1,103 @@
+---
+import { profile, stats } from '../../data/content';
+import { ui, t } from '../../i18n/ui';
+import type { Locale } from '../../data/content';
+interface Props { locale: Locale; }
+const { locale } = Astro.props;
+const base = locale === 'en' ? '/en' : '';
+---
+<section class="hero">
+  <div class="container hero__inner">
+    <div class="hero__text">
+      <span class="eyebrow">{t(profile.location, locale)}</span>
+      <h1 class="hero__name">{t(profile.name, locale)}</h1>
+      <p class="hero__role">{t(profile.role, locale)}</p>
+      <p class="hero__tagline">{t(profile.tagline, locale)}</p>
+      <p class="hero__summary">{t(profile.summary, locale)}</p>
+      <div class="hero__actions">
+        <a class="btn btn--primary" href={`${base}/#contact`}>{t(ui.hero.cta_contact, locale)}</a>
+        <a class="btn btn--ghost" href={`${base}/#experience`}>{t(ui.hero.cta_experience, locale)}</a>
+      </div>
+    </div>
+
+    <div class="hero__portrait">
+      <div class="portrait">
+        <img src="/portrait.jpg" alt={t(profile.name, locale)} loading="eager" onerror="this.style.display='none';this.parentElement.classList.add('portrait--fallback')" />
+        <span class="portrait__mono" aria-hidden="true">AM</span>
+      </div>
+      <div class="portrait__badge">
+        <span class="portrait__dot"></span>
+        {locale === 'ru' ? 'Открыт к предложениям' : 'Open to opportunities'}
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="hero__stats">
+      {stats.map((s) => (
+        <div class="stat">
+          <span class="stat__value">{s.value}</span>
+          <span class="stat__label">{t(s.label, locale)}</span>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero { padding: 72px 0 40px; overflow: hidden; }
+  .hero__inner { display: grid; grid-template-columns: 1.25fr 0.9fr; gap: 56px; align-items: center; }
+
+  .hero__name { font-size: clamp(44px, 7vw, 82px); letter-spacing: -0.04em; }
+  .hero__role { margin-top: 14px; font-size: clamp(17px, 2vw, 20px); font-weight: 600; color: var(--text); }
+  .hero__tagline { margin-top: 22px; font-size: clamp(22px, 3vw, 30px); font-weight: 700; letter-spacing: -0.02em; line-height: 1.2; max-width: 18ch; }
+  .hero__tagline { color: var(--text); }
+  .hero__summary { margin-top: 18px; color: var(--text-muted); font-size: 18px; max-width: 52ch; }
+  .hero__actions { margin-top: 32px; display: flex; gap: 14px; flex-wrap: wrap; }
+
+  .hero__portrait { display: flex; flex-direction: column; align-items: center; gap: 18px; }
+  .portrait {
+    position: relative;
+    width: 100%; max-width: 360px; aspect-ratio: 4 / 5;
+    border-radius: 24px; overflow: hidden;
+    background: linear-gradient(160deg, var(--accent) 0%, var(--blue) 100%);
+    box-shadow: var(--shadow-lg);
+  }
+  .portrait img { width: 100%; height: 100%; object-fit: cover; position: relative; z-index: 2; }
+  .portrait__mono {
+    position: absolute; inset: 0; z-index: 1;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 120px; font-weight: 800; letter-spacing: -0.05em; color: rgba(255,255,255,0.9);
+  }
+  .portrait::after {
+    content: ''; position: absolute; z-index: 3; inset: auto -1px -1px auto;
+    width: 40%; height: 40%;
+  }
+  .portrait__badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 9px 16px; border-radius: 999px;
+    background: var(--surface); border: 1px solid var(--border);
+    font-size: 14px; font-weight: 500;
+  }
+  .portrait__dot { width: 9px; height: 9px; border-radius: 50%; background: #22c55e; box-shadow: 0 0 0 4px rgba(34,197,94,0.18); }
+
+  .hero__stats {
+    margin-top: 56px;
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;
+    padding: 32px; border-radius: var(--radius);
+    background: var(--surface); border: 1px solid var(--border);
+  }
+  .stat { display: flex; flex-direction: column; gap: 6px; }
+  .stat__value { font-size: clamp(28px, 4vw, 40px); font-weight: 800; letter-spacing: -0.03em; color: var(--accent); }
+  .stat__label { font-size: 14px; color: var(--text-muted); line-height: 1.4; }
+
+  @media (max-width: 900px) {
+    .hero__inner { grid-template-columns: 1fr; gap: 40px; }
+    .hero__portrait { order: -1; align-items: flex-start; }
+    .portrait { max-width: 260px; }
+    .hero__stats { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 460px) {
+    .hero__stats { grid-template-columns: 1fr 1fr; padding: 22px; gap: 16px; }
+  }
+</style>

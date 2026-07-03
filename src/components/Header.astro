@@ -1,0 +1,110 @@
+---
+import Logo from './Logo.astro';
+import ThemeToggle from './ThemeToggle.astro';
+import { ui, t, switchLocalePath } from '../i18n/ui';
+import type { Locale } from '../data/content';
+
+interface Props { locale: Locale; path: string; }
+const { locale, path } = Astro.props;
+const base = locale === 'en' ? '/en' : '';
+const other: Locale = locale === 'en' ? 'ru' : 'en';
+const otherPath = switchLocalePath(path, other);
+
+const links = [
+  { href: `${base}/#about`, label: t(ui.nav.about, locale) },
+  { href: `${base}/#experience`, label: t(ui.nav.experience, locale) },
+  { href: `${base}/#skills`, label: t(ui.nav.skills, locale) },
+  { href: `${base}/#portfolio`, label: t(ui.nav.portfolio, locale) },
+  { href: `${base}/#media`, label: t(ui.nav.media, locale) },
+  { href: `${base}/#certificates`, label: t(ui.nav.certificates, locale) },
+];
+---
+<header class="header" id="site-header">
+  <div class="container header__inner">
+    <Logo href={`${base}/`} />
+
+    <nav class="nav" aria-label="Primary">
+      {links.map((l) => <a href={l.href}>{l.label}</a>)}
+    </nav>
+
+    <div class="header__actions">
+      <a class="lang" href={otherPath} hreflang={other} aria-label={other === 'en' ? 'Switch to English' : 'Переключить на русский'}>
+        <span class={locale === 'ru' ? 'is-active' : ''}>RU</span>
+        <span class="lang__sep">/</span>
+        <span class={locale === 'en' ? 'is-active' : ''}>EN</span>
+      </a>
+      <ThemeToggle locale={locale} />
+      <a class="btn btn--primary header__cta" href={`${base}/#contact`}>{t(ui.hero.cta_contact, locale)}</a>
+      <button class="burger" type="button" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+
+  <nav class="mobile-nav" aria-label="Mobile">
+    {links.map((l) => <a href={l.href}>{l.label}</a>)}
+    <a class="btn btn--primary" href={`${base}/#contact`}>{t(ui.hero.cta_contact, locale)}</a>
+  </nav>
+</header>
+
+<style>
+  .header {
+    position: sticky; top: 0; z-index: 50;
+    background: color-mix(in srgb, var(--bg) 82%, transparent);
+    backdrop-filter: saturate(180%) blur(14px);
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.3s ease, background 0.3s ease;
+  }
+  .header.is-scrolled { border-color: var(--border); }
+  .header__inner { display: flex; align-items: center; justify-content: space-between; height: 70px; gap: 20px; }
+
+  .nav { display: flex; gap: 26px; margin: 0 auto; }
+  .nav a { font-size: 15px; font-weight: 500; color: var(--text-muted); transition: color 0.2s ease; }
+  .nav a:hover { color: var(--text); }
+
+  .header__actions { display: flex; align-items: center; gap: 12px; }
+  .header__cta { height: 40px; padding: 0 18px; font-size: 14px; }
+
+  .lang { display: inline-flex; gap: 4px; font-size: 13px; font-weight: 600; color: var(--text-muted); letter-spacing: 0.04em; }
+  .lang .is-active { color: var(--accent); }
+  .lang__sep { opacity: 0.4; }
+
+  .burger { display: none; flex-direction: column; gap: 5px; width: 40px; height: 40px; align-items: center; justify-content: center; background: var(--surface); border: 1px solid var(--border); border-radius: 999px; cursor: pointer; }
+  .burger span { width: 17px; height: 2px; background: var(--text); border-radius: 2px; transition: transform 0.25s ease, opacity 0.2s ease; }
+  .burger[aria-expanded='true'] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .burger[aria-expanded='true'] span:nth-child(2) { opacity: 0; }
+  .burger[aria-expanded='true'] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+  .mobile-nav { display: none; flex-direction: column; gap: 4px; padding: 8px 24px 20px; }
+  .mobile-nav a { padding: 12px 0; font-size: 17px; font-weight: 500; border-bottom: 1px solid var(--border); }
+  .mobile-nav a.btn { border: none; margin-top: 12px; }
+
+  @media (max-width: 900px) {
+    .nav { display: none; }
+    .header__cta { display: none; }
+    .burger { display: flex; }
+    .mobile-nav.is-open { display: flex; }
+  }
+</style>
+
+<script>
+  const header = document.getElementById('site-header');
+  const burger = header?.querySelector('.burger');
+  const mobileNav = header?.querySelector('.mobile-nav');
+
+  burger?.addEventListener('click', () => {
+    const open = burger.getAttribute('aria-expanded') === 'true';
+    burger.setAttribute('aria-expanded', String(!open));
+    mobileNav?.classList.toggle('is-open', !open);
+  });
+  mobileNav?.querySelectorAll('a').forEach((a) =>
+    a.addEventListener('click', () => {
+      burger?.setAttribute('aria-expanded', 'false');
+      mobileNav.classList.remove('is-open');
+    }),
+  );
+
+  const onScroll = () => header?.classList.toggle('is-scrolled', window.scrollY > 8);
+  onScroll();
+  window.addEventListener('scroll', onScroll, { passive: true });
+</script>

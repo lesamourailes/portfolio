@@ -1,0 +1,60 @@
+---
+import { contacts } from '../../data/content';
+import { ui, t } from '../../i18n/ui';
+import type { Locale } from '../../data/content';
+interface Props { locale: Locale; }
+const { locale } = Astro.props;
+
+const items = [
+  { label: 'Email', value: contacts.email, href: `mailto:${contacts.email}` },
+  { label: 'Telegram', value: contacts.telegram.handle, href: contacts.telegram.url },
+  { label: 'LinkedIn', value: '/in/artur-markarian', href: contacts.linkedin },
+  { label: 'GetMentor', value: 'getmentor.dev', href: contacts.getmentor },
+];
+---
+<section class="section" id="contact">
+  <div class="container">
+    <div class="contact reveal">
+      <div class="contact__lead">
+        <span class="eyebrow">{t(ui.sections.contact, locale)}</span>
+        <h2 class="contact__title">{locale === 'ru' ? 'Давайте поговорим' : 'Let’s talk'}</h2>
+        <p class="contact__text">{t(ui.contact.lead, locale)}</p>
+        <a class="btn btn--primary contact__mailbtn" href={`mailto:${contacts.email}`}>{locale === 'ru' ? 'Написать на почту' : 'Send an email'}</a>
+      </div>
+
+      <div class="contact__grid">
+        {items.map((it) => (
+          <a class="contact__item" href={it.href} target={it.href.startsWith('mailto') ? undefined : '_blank'} rel="noopener">
+            <span class="contact__label">{it.label}</span>
+            <span class="contact__value">{it.value}</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .contact {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center;
+    background: var(--surface); border: 1px solid var(--border); border-radius: 24px; padding: 56px;
+  }
+  .contact__title { font-size: clamp(32px, 4.5vw, 52px); letter-spacing: -0.03em; margin: 8px 0 16px; }
+  .contact__text { color: var(--text-muted); font-size: 18px; max-width: 40ch; }
+  .contact__mailbtn { margin-top: 28px; }
+
+  .contact__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .contact__item {
+    display: flex; flex-direction: column; gap: 6px;
+    background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius);
+    padding: 20px; transition: border-color 0.2s ease, transform 0.2s ease;
+  }
+  .contact__item:hover { border-color: var(--accent); transform: translateY(-2px); }
+  .contact__label { font-size: 13px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-muted); }
+  .contact__value { font-weight: 600; word-break: break-word; }
+
+  @media (max-width: 820px) {
+    .contact { grid-template-columns: 1fr; gap: 32px; padding: 36px; }
+  }
+  @media (max-width: 420px) { .contact__grid { grid-template-columns: 1fr; } }
+</style>
