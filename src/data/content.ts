@@ -31,15 +31,22 @@ export const stats: { value: string; label: L }[] = [
   { value: '2019', label: { ru: 'проект года', en: 'project of the year' } },
 ];
 
-export const about = {
-  paragraphs: {
-    ru: [
+export const about: Record<Locale, { paragraphs: string[]; bullets: string[] }> = {
+  ru: {
+    paragraphs: [
       'Руководитель продукта с опытом более 9 лет и практикой управления командами от 3 до 5 человек. Провёл продукты через полный цикл — от исследования и unit-экономики до запуска, масштабирования и P&L.',
       'Ключевые достижения: каждая 20-я шоколадка, произведённая в России, проходит контроль качества на оборудовании и ПО, спроектированном под моим руководством; совместная с лидером рынка hh.ru платформа для поиска подработки с 1M+ MAU; и первый в России промышленный запуск системы распознавания товаров на полке в секторе FMCG.',
     ],
-    en: [
-      'Head of Product with 9+ years of experience and hands-on leadership of teams of 3–5. I take products through the full cycle — from research and unit economics to launch, scale, and P&L ownership.',
-      'Key achievements: every 20th chocolate bar produced in the country passes quality control on hardware and software designed under my lead; a gig-work platform built with market leader hh.ru reaching 1M+ MAU; and the first industrial rollout of shelf image recognition in the FMCG sector in the country.',
+    bullets: [],
+  },
+  en: {
+    paragraphs: [
+      'Head of product, 9+ years in Product management with practical leadership skills (3 to 5 subordinates). Key achievement: managed 3 products, influenced to a biggest segment of the country population:',
+    ],
+    bullets: [
+      'Every 20th chocolate bar produced in country is safety-tested using my product',
+      'A platform developed with an HR tech leader',
+      'The first in country launched an image recognition in the FMCG sector',
     ],
   },
 };

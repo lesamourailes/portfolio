@@ -4,12 +4,18 @@ import { ui, t } from '../../i18n/ui';
 import type { Locale } from '../../data/content';
 interface Props { locale: Locale; }
 const { locale } = Astro.props;
+const intro = about[locale];
 ---
 <section class="section" id="about">
   <div class="container about">
     <div class="about__intro reveal">
       <span class="eyebrow">{t(ui.sections.about, locale)}</span>
-      {about.paragraphs[locale].map((p) => <p class="about__p">{p}</p>)}
+      {intro.paragraphs.map((p) => <p class="about__p">{p}</p>)}
+      {intro.bullets.length > 0 && (
+        <ul class="about__list">
+          {intro.bullets.map((b) => <li>{b}</li>)}
+        </ul>
+      )}
     </div>
 
     <aside class="about__edu reveal">
@@ -31,6 +37,9 @@ const { locale } = Astro.props;
   .about { display: grid; grid-template-columns: 1.6fr 1fr; gap: 56px; align-items: start; }
   .about__p { font-size: 20px; line-height: 1.6; margin-top: 20px; }
   .about__p:first-of-type { margin-top: 0; }
+  .about__list { margin: 20px 0 0; padding: 0; list-style: none; display: grid; gap: 12px; }
+  .about__list li { position: relative; padding-left: 26px; font-size: 18px; line-height: 1.5; }
+  .about__list li::before { content: ''; position: absolute; left: 4px; top: 10px; width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
 
   .about__edu { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 28px; }
   .about__edu-title { font-size: 18px; margin-bottom: 20px; }
