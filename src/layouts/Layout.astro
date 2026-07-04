@@ -2,6 +2,7 @@
 import '../styles/global.css';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import { profile, contacts } from '../data/content';
 import type { Locale } from '../data/content';
 
 interface Props {
@@ -11,8 +12,26 @@ interface Props {
   path: string;
 }
 const { title, description, locale, path } = Astro.props;
-const canonical = new URL(path, Astro.site ?? 'https://arturmarkarian.com').toString();
-const ogImage = new URL('/og.png', Astro.site ?? 'https://arturmarkarian.com').toString();
+const SITE = Astro.site ?? new URL('https://www.arturmarkarian.com');
+const basePath = path.replace(/^\/en/, '') || '/';
+const canonical = new URL(path, SITE).toString();
+const ogImage = new URL('/og.png', SITE).toString();
+const ruHref = new URL(basePath, SITE).toString();
+const enHref = new URL('/en' + (basePath === '/' ? '' : basePath), SITE).toString();
+const ogLocale = locale === 'ru' ? 'ru_RU' : 'en_US';
+const ogLocaleAlt = locale === 'ru' ? 'en_US' : 'ru_RU';
+const personLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: profile.name[locale],
+  alternateName: locale === 'ru' ? profile.name.en : profile.name.ru,
+  jobTitle: profile.role[locale],
+  url: SITE.toString(),
+  image: new URL('/portrait.jpg', SITE).toString(),
+  email: 'mailto:' + contacts.email,
+  sameAs: [contacts.linkedin, contacts.telegram.url, contacts.getmentor],
+  knowsLanguage: ['ru', 'en'],
+};
 ---
 <!doctype html>
 <html lang={locale}>
@@ -22,15 +41,28 @@ const ogImage = new URL('/og.png', Astro.site ?? 'https://arturmarkarian.com').t
     <title>{title}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
-    <link rel="alternate" hreflang="ru" href={new URL(path.replace(/^\/en/, '') || '/', Astro.site ?? 'https://arturmarkarian.com').toString()} />
-    <link rel="alternate" hreflang="en" href={new URL('/en' + (path.replace(/^\/en/, '') || ''), Astro.site ?? 'https://arturmarkarian.com').toString()} />
+    <link rel="alternate" hreflang="ru" href={ruHref} />
+    <link rel="alternate" hreflang="en" href={enHref} />
+    <link rel="alternate" hreflang="x-default" href={ruHref} />
 
     <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Artur Markarian" />
+    <meta property="og:locale" content={ogLocale} />
+    <meta property="og:locale:alternate" content={ogLocaleAlt} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
     <meta property="og:image" content={ogImage} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content={`${profile.name[locale]} — ${profile.role[locale]}`} />
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+
+    <script type="application/ld+json" set:html={JSON.stringify(personLd)} is:inline />
+    <meta name="author" content="Artur Markarian" />
 
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
