@@ -24,11 +24,11 @@ export const contacts = {
   getmentor: 'https://getmentor.dev/mentor/artur-markarian-5874',
 };
 
-export const stats: { value: string; label: L }[] = [
-  { value: '9+', label: { ru: 'лет в продукте', en: 'years in product' } },
-  { value: '1M+', label: { ru: 'max MAU продукта', en: 'max product MAU' } },
-  { value: '25', label: { ru: 'стран мира', en: 'countries worldwide' } },
-  { value: '2019', label: { ru: 'проект года', en: 'project of the year' } },
+export const stats: { value: L; label: L }[] = [
+  { value: { ru: '10 лет', en: '10 years' }, label: { ru: 'в продуктовой разработке', en: 'in product development' } },
+  { value: { ru: '1 млн', en: '1M' }, label: { ru: 'MAU в одном продукте', en: 'MAU in one product' } },
+  { value: { ru: '25', en: '25' }, label: { ru: 'стран мира', en: 'countries worldwide' } },
+  { value: { ru: '2019', en: '2019' }, label: { ru: 'проект года', en: 'project of the year' } },
 ];
 
 export const about: Record<Locale, { paragraphs: string[]; bullets: string[] }> = {
@@ -160,7 +160,7 @@ export const communities: Community[] = [
 export const education = [
   {
     school: { ru: 'Московский финансово-промышленный университет', en: 'Financial and Industrial University' },
-    degree: { ru: 'Финансовый менеджмент', en: 'Financial management, BA equivalent' },
+    degree: { ru: 'Финансовый менеджер', en: 'Financial manager, BA equivalent' },
     period: '2009 — 2012',
   },
   {

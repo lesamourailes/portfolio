@@ -10,7 +10,7 @@ const hasPhotos = photos.length > 0;
   <div class="container">
     <div class="reveal">
       <span class="eyebrow">{t(ui.sections.gallery, locale)}</span>
-      <h2 class="section-title">{locale === 'ru' ? 'Фотографии с коллегами' : 'With colleagues'}</h2>
+      <h2 class="section-title">{locale === 'ru' ? 'Фото и видео' : 'Photos & videos'}</h2>
     </div>
 
     {hasPhotos ? (
@@ -37,12 +37,12 @@ const hasPhotos = photos.length > 0;
   {hasPhotos && (
     <div class="lightbox" id="gallery-lightbox" aria-hidden="true" role="dialog" aria-modal="true">
       <button class="lightbox__close" data-lb="close" aria-label="Close">&times;</button>
-      <button class="lightbox__nav lightbox__nav--prev" data-lb="prev" aria-label="Previous">&#8249;</button>
+      <button class="lightbox__nav lightbox__nav--prev" data-lb="prev" aria-label="Previous"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg></button>
       <figure class="lightbox__figure">
         <img id="gallery-lightbox-img" src="" alt="" />
         <figcaption id="gallery-lightbox-caption"></figcaption>
       </figure>
-      <button class="lightbox__nav lightbox__nav--next" data-lb="next" aria-label="Next">&#8250;</button>
+      <button class="lightbox__nav lightbox__nav--next" data-lb="next" aria-label="Next"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></button>
     </div>
   )}
 </section>
@@ -130,9 +130,10 @@ const hasPhotos = photos.length > 0;
     position: absolute; top: 50%; transform: translateY(-50%);
     width: 52px; height: 52px; border-radius: 50%;
     background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); color: #fff;
-    font-size: 30px; cursor: pointer; display: flex; align-items: center; justify-content: center;
+    cursor: pointer; display: flex; align-items: center; justify-content: center;
     transition: background 0.2s ease;
   }
+  .lightbox__nav svg { pointer-events: none; }
   .lightbox__nav:hover { background: rgba(255,255,255,0.22); }
   .lightbox__nav--prev { left: 24px; }
   .lightbox__nav--next { right: 24px; }

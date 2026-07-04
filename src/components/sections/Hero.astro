@@ -31,7 +31,7 @@ const base = locale === 'en' ? '/en' : '';
     <div class="hero__stats">
       {stats.map((s) => (
         <div class="stat">
-          <span class="stat__value">{s.value}</span>
+          <span class="stat__value">{t(s.value, locale)}</span>
           <span class="stat__label">{t(s.label, locale)}</span>
         </div>
       ))}

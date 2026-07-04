@@ -21,14 +21,14 @@ export const ui = {
   },
   sections: {
     about: { ru: 'Обо мне', en: 'About' },
-    experience: { ru: 'Опыт работы', en: 'Experience' },
+    experience: { ru: 'Опыт', en: 'Experience' },
     skills: { ru: 'Навыки', en: 'Skills' },
     education: { ru: 'Образование', en: 'Education' },
     portfolio: { ru: 'Портфолио', en: 'Portfolio' },
     communities: { ru: 'Ассоциации', en: 'Associations' },
     media: { ru: 'СМИ обо мне', en: 'Media' },
     certificates: { ru: 'Сертификаты', en: 'Certificates' },
-    gallery: { ru: 'Фотогалерея', en: 'Gallery' },
+    gallery: { ru: 'Галерея', en: 'Gallery' },
     contact: { ru: 'Контакты', en: 'Contact' },
   },
   portfolio: {
@@ -52,8 +52,8 @@ export const ui = {
   },
   contact: {
     lead: {
-      ru: 'Открыт к сильным продуктовым вызовам, консультациям и менторству.',
-      en: 'Open to strong product challenges, consulting and mentorship.',
+      ru: 'Продуктовые задачи, консалтинг и менторство',
+      en: 'Product challenges, consulting and mentorship',
     },
   },
   footer: {
