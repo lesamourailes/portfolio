@@ -26,7 +26,7 @@ const groups = [
             {g.items.map((item) => (
               <article class="pf-card">
                 <div class={`pf-card__media pf-card__media--${g.variant}`}>
-                  <img src={g.variant === 'web' && locale === 'en' && item.srcEn ? item.srcEn : item.src} alt={t(item.title, locale)} loading="lazy" />
+                  <img src={locale === 'en' && item.srcEn ? item.srcEn : item.src} alt={t(item.title, locale)} loading="lazy" />
                 </div>
                 <div class="pf-card__body">
                   <h4>{t(item.title, locale)}</h4>

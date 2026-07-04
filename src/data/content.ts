@@ -318,7 +318,49 @@ export const portfolio: { web: PortfolioItem[]; mobile: PortfolioItem[] } = {
       result: { ru: 'Оптимизация ФОТ на 6%, TimeTravel на 12%', en: '6% payroll cost optimization, 12% less travel time' },
     },
   ],
-  mobile: [],
+  mobile: [
+    {
+      src: '/portfolio/sfa-mobile.png',
+      title: { ru: 'SFA', en: 'SFA' },
+      description: { ru: 'Система автоматизации полевого персонала', en: 'Field force automation system' },
+      bullets: [
+        { ru: 'Чек-ин по GPS, анкетирование', en: 'GPS check-in, surveys' },
+        { ru: 'Авто-расчёт выполнения KPI (SoS, планограмма…)', en: 'Automatic KPI calculation (SoS, planogram…)' },
+        { ru: 'Исправление ситуации во время визита, не постфактум', en: 'Fixing issues during the visit, not after the fact' },
+      ],
+    },
+    {
+      src: '/portfolio/image-recognition.png',
+      title: { ru: 'Распознавание товара на полке', en: 'Shelf image recognition' },
+      description: { ru: 'Система автоматизации полевого персонала', en: 'Field force automation system' },
+      bullets: [
+        { ru: 'Маршрутизация и GPS-контроль', en: 'Routing and GPS control' },
+        { ru: 'Конструктор KPI и анкетирование', en: 'KPI builder and surveys' },
+        { ru: 'Распознавание товара на полке', en: 'Shelf image recognition' },
+      ],
+    },
+    {
+      src: '/portfolio/my-shifts.jpg',
+      title: { ru: 'Интеграция с HeadHunter', en: 'HeadHunter integration' },
+      description: { ru: 'WebView в разделе «Подработка»', en: 'WebView in the “Gig work” section' },
+      bullets: [
+        { ru: 'Бронирование смен пользователями hh.ru', en: 'Shift booking by hh.ru users' },
+        { ru: 'Все чувствительные флоу в «Моей смене» (legal)', en: 'All sensitive flows handled in My Shift (legal)' },
+        { ru: 'MAU 1 млн, лидер рынка HR tech', en: 'MAU 1M, HR-tech market leader' },
+      ],
+    },
+    {
+      src: '/portfolio/pulse-ru.png',
+      srcEn: '/portfolio/pulse-en.png',
+      title: { ru: 'Pulse', en: 'Pulse' },
+      description: { ru: 'AI-ассистент любого сотрудника компании', en: 'AI assistant for any company employee' },
+      bullets: [
+        { ru: 'Распознавание запроса в любой форме', en: 'Understands a request in any form' },
+        { ru: 'Конвертация в SQL и выборка данных из базы', en: 'Converts to SQL and queries the database' },
+        { ru: 'Автоматический расчёт метрик и KPI', en: 'Automatic calculation of metrics and KPIs' },
+      ],
+    },
+  ],
 };
 
 export type Photo = { src: string; caption?: L };
