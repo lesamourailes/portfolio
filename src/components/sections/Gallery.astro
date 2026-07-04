@@ -90,9 +90,9 @@ const hasPhotos = photos.length > 0;
 )}
 
 <style>
-  .gallery { margin-top: 44px; column-count: 3; column-gap: 16px; }
+  .gallery { margin-top: 44px; column-count: 4; column-gap: 14px; }
   .gallery__item {
-    display: block; width: 100%; margin: 0 0 16px; padding: 0;
+    display: block; width: 100%; margin: 0 0 14px; padding: 0;
     border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden;
     background: var(--surface-2); cursor: pointer; position: relative;
     break-inside: avoid; transition: border-color 0.2s ease, transform 0.2s ease;
@@ -138,9 +138,9 @@ const hasPhotos = photos.length > 0;
   .lightbox__nav--prev { left: 24px; }
   .lightbox__nav--next { right: 24px; }
 
-  @media (max-width: 780px) { .gallery { column-count: 2; } }
+  @media (max-width: 900px) { .gallery { column-count: 3; } }
+  @media (max-width: 600px) { .gallery { column-count: 2; } }
   @media (max-width: 480px) {
-    .gallery { column-count: 1; }
     .lightbox { padding: 16px; }
     .lightbox__nav { width: 42px; height: 42px; font-size: 24px; }
     .lightbox__nav--prev { left: 8px; }
