@@ -152,7 +152,7 @@ export const communities: Community[] = [
 
 export const education = [
   {
-    school: { ru: 'Московский финансово-промышленный университет', en: 'University of Finance and Industry' },
+    school: { ru: 'Московский финансово-промышленный университет', en: 'Financial and Industrial University' },
     degree: { ru: 'Финансовый менеджмент', en: 'Financial management, BA equivalent' },
     period: '2009 — 2012',
   },
