@@ -32,7 +32,7 @@ export const ui = {
     contact: { ru: 'Контакты', en: 'Contact' },
   },
   portfolio: {
-    web: { ru: 'Веб-приложения', en: 'Web apps' },
+    web: { ru: 'SaaS и On-Premise', en: 'SaaS & On-Premise' },
     mobile: { ru: 'Мобильные приложения', en: 'Mobile apps' },
     empty: {
       ru: 'Скоро здесь появятся скриншоты и разбор кейсов.',
