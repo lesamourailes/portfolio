@@ -144,7 +144,7 @@ export const communities: Community[] = [
     period: '2025',
   },
   {
-    title: { ru: 'GlobalCIO — Ассоциация ИТ-директоров России', en: 'GlobalCIO. Association of IT Leaders' },
+    title: { ru: 'GlobalCIO. Ассоциация ИТ-директоров России', en: 'GlobalCIO. Association of IT Leaders' },
     detail: { ru: 'Член ассоциации, спикер отраслевых конференций', en: 'Member & speaker at industry conferences' },
     period: '2018',
   },
