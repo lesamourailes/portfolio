@@ -226,6 +226,12 @@ export const portfolio: { web: PortfolioItem[]; mobile: PortfolioItem[] } = {
   mobile: [],
 };
 
+export type Photo = { src: string; caption?: L };
+
+// Фотографии с коллегами и мероприятий. Пример:
+// { src: '/gallery/team-2024.jpg', caption: { ru: 'Команда SmartMerch, 2024', en: 'SmartMerch team, 2024' } }
+export const photos: Photo[] = [];
+
 export type Certificate = { src: string; title: L; issuer: L; year: string };
 
 export const certificates: Certificate[] = [

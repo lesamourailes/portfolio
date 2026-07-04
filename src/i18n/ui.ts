@@ -12,6 +12,7 @@ export const ui = {
     communities: { ru: 'Ассоциации', en: 'Associations' },
     media: { ru: 'СМИ', en: 'Media' },
     certificates: { ru: 'Сертификаты', en: 'Certificates' },
+    gallery: { ru: 'Фото', en: 'Photos' },
     contact: { ru: 'Контакты', en: 'Contact' },
   },
   hero: {
@@ -27,6 +28,7 @@ export const ui = {
     communities: { ru: 'Ассоциации', en: 'Associations' },
     media: { ru: 'СМИ обо мне', en: 'Media' },
     certificates: { ru: 'Сертификаты', en: 'Certificates' },
+    gallery: { ru: 'Фотогалерея', en: 'Gallery' },
     contact: { ru: 'Контакты', en: 'Contact' },
   },
   portfolio: {
@@ -35,6 +37,12 @@ export const ui = {
     empty: {
       ru: 'Скоро здесь появятся скриншоты и разбор кейсов.',
       en: 'Screenshots and case breakdowns are coming soon.',
+    },
+  },
+  gallery: {
+    empty: {
+      ru: 'Скоро здесь появятся фотографии с коллегами и мероприятий.',
+      en: 'Photos with colleagues and from events are coming soon.',
     },
   },
   media_kind: {
