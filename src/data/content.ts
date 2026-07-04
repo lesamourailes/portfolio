@@ -12,8 +12,8 @@ export const profile = {
     en: { lead: 'I create products ', accent: 'that change the world' },
   },
   summary: {
-    ru: '9+ лет в продуктовом менеджменте. От FMCG-гиганта до IT-стартапов: запускаю продукты с измеримым эффектом — рост выручки, миллионы пользователей и первые в стране технологические внедрения.',
-    en: '9+ years in product management. From an FMCG leader to IT startups — I launch products with measurable impact: revenue growth, millions of users, and country-first tech rollouts.',
+    ru: '10 лет в продуктовом менеджменте: от IT-стартапов до крупных корпораций. Запускаю продукты с измеримым эффектом: рост выручки, миллионы пользователей и первые в стране технологические внедрения.',
+    en: '10 years in product management. From an FMCG leader to IT startups — I launch products with measurable impact: revenue growth, millions of users, and country-first tech rollouts.',
   },
 };
 
@@ -34,14 +34,17 @@ export const stats: { value: L; label: L }[] = [
 export const about: Record<Locale, { paragraphs: string[]; bullets: string[] }> = {
   ru: {
     paragraphs: [
-      'Руководитель продукта с опытом более 9 лет и практикой управления командами от 3 до 5 человек. Провёл продукты через полный цикл — от исследования и unit-экономики до запуска, масштабирования и P&L.',
-      'Ключевые достижения: каждая 20-я шоколадка, произведённая в России, проходит контроль качества на оборудовании и ПО, спроектированном под моим руководством; совместная с лидером рынка hh.ru платформа для поиска подработки с 1M+ MAU; и первый в России промышленный запуск системы распознавания товаров на полке в секторе FMCG.',
+      'Руководитель продукта с 10-летним опытом. Ключевое достижение: запустил три продукта, влияющих на широкий сегмент населения страны:',
     ],
-    bullets: [],
+    bullets: [
+      'Каждая 20-я шоколадка, произведённая в России, проходит контроль качества на оборудовании и ПО, спроектированном под моим руководством',
+      'Спроектирована и запущена платформа для поиска подработки совместно с hh.ru',
+      'Первый в России промышленный запуск системы распознавания товаров на полке в секторе FMCG',
+    ],
   },
   en: {
     paragraphs: [
-      'Head of product, 9+ years in Product management with practical leadership skills (3 to 5 subordinates). Key achievement: managed 3 products, influenced to a biggest segment of the country population:',
+      'Head of product, 10 years in Product management with practical leadership skills (3 to 5 subordinates). Key achievement: managed 3 products, influenced to a biggest segment of the country population:',
     ],
     bullets: [
       'Every 20th chocolate bar produced in country is safety-tested using my product',
@@ -351,7 +354,7 @@ export const portfolio: { web: PortfolioItem[]; mobile: PortfolioItem[] } = {
       bullets: [
         { ru: 'Бронирование смен пользователями hh.ru', en: 'Shift booking by hh.ru users' },
         { ru: 'Все чувствительные флоу в «Моей смене» (legal)', en: 'All sensitive flows handled in My Shift (legal)' },
-        { ru: 'MAU 1 млн, лидер рынка HR tech', en: 'MAU 1M, HR-tech market leader' },
+        { ru: 'Лидер рынка HR tech', en: 'HR-tech market leader' },
       ],
     },
     {
