@@ -13,7 +13,7 @@ const items = byYearDesc(certificates, (c) => c.year);
       <h2 class="section-title">{locale === 'ru' ? 'Сертификаты и дипломы' : 'Certificates & diplomas'}</h2>
     </div>
 
-    <div class="certs" id="certs-grid">
+    <div class="certs is-collapsed" id="certs-grid">
       {items.map((c, i) => (
         <button class="cert reveal" data-index={i} type="button">
           <div class="cert__thumb"><img src={c.src} alt={t(c.title, locale)} loading="lazy" /></div>
@@ -24,6 +24,11 @@ const items = byYearDesc(certificates, (c) => c.year);
         </button>
       ))}
     </div>
+    {items.length > 8 && (
+      <div class="show-more-wrap">
+        <button class="show-more" type="button" data-grid="certs-grid" data-more={`${t(ui.more.show, locale)} (${items.length - 8})`} data-less={t(ui.more.less, locale)}>{`${t(ui.more.show, locale)} (${items.length - 8})`}</button>
+      </div>
+    )}
   </div>
 
   <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-modal="true">
@@ -79,6 +84,7 @@ const items = byYearDesc(certificates, (c) => c.year);
 
 <style>
   .certs { margin-top: 44px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+  .certs.is-collapsed .cert:nth-child(n+9) { display: none; }
   .cert {
     display: flex; flex-direction: column; text-align: left; gap: 0;
     background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);

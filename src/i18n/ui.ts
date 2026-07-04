@@ -63,6 +63,10 @@ export const ui = {
   theme: {
     toggle: { ru: 'Переключить тему', en: 'Toggle theme' },
   },
+  more: {
+    show: { ru: 'Показать ещё', en: 'Show more' },
+    less: { ru: 'Свернуть', en: 'Show less' },
+  },
 } as const;
 
 export function t(entry: Record<Locale, string>, locale: Locale): string {

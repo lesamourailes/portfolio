@@ -118,6 +118,15 @@ const personLd = {
         { threshold: 0.12 },
       );
       document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
+
+      document.querySelectorAll('.show-more').forEach((btn) => {
+        const grid = document.getElementById(btn.dataset.grid);
+        if (!grid) return;
+        btn.addEventListener('click', () => {
+          const collapsed = grid.classList.toggle('is-collapsed');
+          btn.textContent = collapsed ? btn.dataset.more : btn.dataset.less;
+        });
+      });
     </script>
   </body>
 </html>

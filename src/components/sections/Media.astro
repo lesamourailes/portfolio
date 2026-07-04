@@ -13,7 +13,7 @@ const items = byYearDesc(media, (m) => m.year);
       <h2 class="section-title">{locale === 'ru' ? 'СМИ и выступления' : 'Media & talks'}</h2>
     </div>
 
-    <div class="media">
+    <div class="media is-collapsed" id="media-grid">
       {items.map((m) => (
         <a class="media-card reveal" href={m.url} target="_blank" rel="noopener">
           <div class="media-card__top">
@@ -30,11 +30,17 @@ const items = byYearDesc(media, (m) => m.year);
         </a>
       ))}
     </div>
+    {items.length > 6 && (
+      <div class="show-more-wrap">
+        <button class="show-more" type="button" data-grid="media-grid" data-more={`${t(ui.more.show, locale)} (${items.length - 6})`} data-less={t(ui.more.less, locale)}>{`${t(ui.more.show, locale)} (${items.length - 6})`}</button>
+      </div>
+    )}
   </div>
 </section>
 
 <style>
   .media { margin-top: 44px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .media.is-collapsed .media-card:nth-child(n+7) { display: none; }
   .media-card {
     display: flex; flex-direction: column; gap: 16px;
     background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);

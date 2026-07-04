@@ -22,7 +22,8 @@ const groups = [
         <h3 class="pf-group__title">{t(g.title, locale)}</h3>
 
         {g.items.length > 0 ? (
-          <div class={`pf-grid pf-grid--${g.variant}`}>
+          <Fragment>
+          <div class={`pf-grid pf-grid--${g.variant}${g.variant === 'web' && g.items.length > 4 ? ' is-collapsed' : ''}`} id={g.variant === 'web' ? 'pf-web-grid' : undefined}>
             {g.items.map((item) => {
               const full = locale === 'en' && item.srcEn ? item.srcEn : item.src;
               const thumb = locale === 'en'
@@ -50,6 +51,12 @@ const groups = [
               );
             })}
           </div>
+          {g.variant === 'web' && g.items.length > 4 && (
+            <div class="show-more-wrap">
+              <button class="show-more" type="button" data-grid="pf-web-grid" data-more={`${t(ui.more.show, locale)} (${g.items.length - 4})`} data-less={t(ui.more.less, locale)}>{`${t(ui.more.show, locale)} (${g.items.length - 4})`}</button>
+            </div>
+          )}
+          </Fragment>
         ) : (
           <div class="portfolio__empty">
             <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -120,6 +127,7 @@ const groups = [
 
   .pf-grid { display: grid; gap: 24px; }
   .pf-grid--web { grid-template-columns: repeat(2, 1fr); }
+  .pf-grid--web.is-collapsed .pf-card:nth-child(n+5) { display: none; }
   .pf-grid--mobile { grid-template-columns: repeat(4, 1fr); }
 
   .pf-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; transition: border-color 0.25s ease; }
