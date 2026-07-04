@@ -215,14 +215,109 @@ export const media: MediaItem[] = [
   },
 ];
 
-export type PortfolioItem = { src: string; title: L; description: L; tags?: string[]; url?: string };
+export type PortfolioItem = {
+  src: string;
+  srcEn?: string; // локализованная версия скриншота (если есть)
+  title: L;
+  description: L;
+  bullets?: L[];
+  result?: L;
+  tags?: string[];
+  url?: string;
+};
 
-// Наполняется скриншотами продуктов.
-// web — горизонтальные (16:10), mobile — вертикальные (скриншоты телефонов).
-// Пример: { src: '/portfolio/sm-visor.jpg', title: { ru: 'SM Visor', en: 'SM Visor' },
-//   description: { ru: 'Распознавание товаров на полке', en: 'Shelf image recognition' }, tags: ['Computer Vision'] }
 export const portfolio: { web: PortfolioItem[]; mobile: PortfolioItem[] } = {
-  web: [],
+  web: [
+    {
+      src: '/portfolio/creatio.png',
+      title: { ru: 'Система согласования проектов', en: 'Project approval system' },
+      description: { ru: 'Автоматический расчёт метрик и прибыльности проекта', en: 'Automatic calculation of project metrics and profitability' },
+      bullets: [
+        { ru: 'Интеграция с 1С, SFA и СЭД', en: 'Integration with 1C, SFA and EDMS' },
+        { ru: 'Автоматический расчёт метрик и прибыльности', en: 'Automatic calculation of metrics and profitability' },
+        { ru: 'Автоматическое создание и наполнение договоров', en: 'Automatic creation and population of contracts' },
+      ],
+      result: { ru: 'Оптимизация ФОТ на 8%', en: '8% payroll cost optimization' },
+    },
+    {
+      src: '/portfolio/kpi.png',
+      title: { ru: 'Конструктор KPI', en: 'KPI builder' },
+      description: { ru: 'Настройка в один клик и авторасчёт KPI без разработки', en: 'One-click setup and automatic KPI calculation with no development' },
+      bullets: [
+        { ru: 'Работает на визите в реальном времени', en: 'Works during the visit in real time' },
+        { ru: 'Подсказывает, что нужно изменить', en: 'Suggests what needs to change' },
+        { ru: 'Есть офлайн-режим при отсутствии интернета', en: 'Offline mode when there is no internet' },
+      ],
+      result: { ru: '+1.5% в объёме выручки', en: '+1.5% in revenue' },
+    },
+    {
+      src: '/portfolio/nrm-ru.png',
+      srcEn: '/portfolio/nrm-en.jpg',
+      title: { ru: 'NRM', en: 'NRM' },
+      description: { ru: 'Прогнозирование эффективности промо', en: 'Promo effectiveness forecasting' },
+      bullets: [
+        { ru: 'Интеграция со всеми учётными системами компании', en: 'Integration with all company accounting systems' },
+        { ru: 'Календарь планируемых промо-активностей', en: 'Calendar of planned promo activities' },
+        { ru: 'Авто-отклонение / согласование при достижении порога ROI', en: 'Auto rejection / approval upon reaching the ROI threshold' },
+      ],
+      result: { ru: 'На 25% выше скорость принятия решений', en: '25% faster decision-making' },
+    },
+    {
+      src: '/portfolio/top-mt.png',
+      title: { ru: 'Аналитика в Power BI', en: 'Analytics in Power BI' },
+      description: { ru: 'Аналитический хаб, работающий в реальном времени', en: 'A real-time analytics hub' },
+      bullets: [
+        { ru: 'Пример с метриками оценки качества распознавания', en: 'Example with image-recognition quality metrics' },
+        { ru: 'Единый DWH для консолидации данных', en: 'Unified DWH for data consolidation' },
+        { ru: 'Гибкая многоуровневая ролевая модель', en: 'Flexible multi-level role model' },
+      ],
+      result: { ru: 'На 25% выше скорость принятия решений', en: '25% faster decision-making' },
+    },
+    {
+      src: '/portfolio/routing.png',
+      title: { ru: 'SFA', en: 'SFA' },
+      description: { ru: 'Система автоматизации полевого персонала', en: 'Field force automation system' },
+      bullets: [
+        { ru: 'Маршрутизация и GPS-контроль', en: 'Routing and GPS control' },
+        { ru: 'Конструктор KPI и анкетирование', en: 'KPI builder and surveys' },
+        { ru: 'Распознавание товара на полке', en: 'Shelf image recognition' },
+      ],
+      result: { ru: '+4% в объёме выручки', en: '+4% in revenue' },
+    },
+    {
+      src: '/portfolio/sm-camera.png',
+      title: { ru: 'Контроль холодильника 24/7', en: 'Fridge monitoring 24/7' },
+      description: { ru: 'Физическая камера на дверце холодильника', en: 'A physical camera on the fridge door' },
+      bullets: [
+        { ru: 'Настраиваемая частота и скорость съёмки', en: 'Configurable capture frequency and speed' },
+        { ru: 'Автоматическое распознавание позиций на полках', en: 'Automatic recognition of items on shelves' },
+        { ru: 'Контроль фрода со стороны торговой точки', en: 'Fraud control on the retailer’s side' },
+      ],
+      result: { ru: 'Оптимизация ФОТ на 17%', en: '17% payroll cost optimization' },
+    },
+    {
+      src: '/portfolio/sm-factory.png',
+      title: { ru: 'Оценка качества готовой продукции', en: 'Finished-goods quality control' },
+      description: { ru: 'Софт и модернизация производственной линии', en: 'Software and production-line modernization' },
+      bullets: [
+        { ru: 'Распознавание инородных материалов', en: 'Foreign-material detection' },
+        { ru: 'Автоматическая отбраковка', en: 'Automatic rejection of defects' },
+        { ru: 'Подстраивается под скорость движения ленты', en: 'Adapts to the conveyor belt speed' },
+      ],
+      result: { ru: '99.9% товара без брака, исключение репутационных издержек', en: '99.9% defect-free output, eliminating reputational costs' },
+    },
+    {
+      src: '/portfolio/zig-zag.png',
+      title: { ru: 'Система автомаршрутизации', en: 'Auto-routing system' },
+      description: { ru: 'Автоматически распределяет магазины по кластерам и исполнителям', en: 'Automatically distributes stores across clusters and field reps' },
+      bullets: [
+        { ru: 'Исходные данные: справочник магазинов и исполнителей', en: 'Input data: directory of stores and field reps' },
+        { ru: 'Учитывает частоту посещений, категорию и десятки других атрибутов', en: 'Accounts for visit frequency, category and dozens of other attributes' },
+        { ru: 'Автоматический перерасчёт при выбывании сотрудника или магазина', en: 'Automatic recalculation when a rep or store drops out' },
+      ],
+      result: { ru: 'Оптимизация ФОТ на 6%, TimeTravel на 12%', en: '6% payroll cost optimization, 12% less travel time' },
+    },
+  ],
   mobile: [],
 };
 

@@ -26,11 +26,19 @@ const groups = [
             {g.items.map((item) => (
               <article class="pf-card">
                 <div class={`pf-card__media pf-card__media--${g.variant}`}>
-                  <img src={item.src} alt={t(item.title, locale)} loading="lazy" />
+                  <img src={g.variant === 'web' && locale === 'en' && item.srcEn ? item.srcEn : item.src} alt={t(item.title, locale)} loading="lazy" />
                 </div>
                 <div class="pf-card__body">
                   <h4>{t(item.title, locale)}</h4>
-                  <p>{t(item.description, locale)}</p>
+                  <p class="pf-card__desc">{t(item.description, locale)}</p>
+                  {item.bullets && (
+                    <ul class="pf-card__bullets">
+                      {item.bullets.map((b) => <li>{t(b, locale)}</li>)}
+                    </ul>
+                  )}
+                  {item.result && (
+                    <p class="pf-card__result"><span>{locale === 'ru' ? 'Результат' : 'Result'}</span>{t(item.result, locale)}</p>
+                  )}
                   {item.tags && <div class="pf-card__tags">{item.tags.map((tg) => <span class="tag">{tg}</span>)}</div>}
                 </div>
               </article>
@@ -62,12 +70,18 @@ const groups = [
   .pf-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; transition: border-color 0.25s ease; }
   .pf-card:hover { border-color: var(--border-strong); }
   .pf-card__media { overflow: hidden; background: var(--surface-2); }
-  .pf-card__media--web { aspect-ratio: 16 / 10; }
+  .pf-card__media--web { aspect-ratio: 16 / 10; padding: 12px; }
   .pf-card__media--mobile { aspect-ratio: 9 / 19; }
   .pf-card__media img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
-  .pf-card__body { padding: 20px 22px; }
-  .pf-card__body h4 { font-size: 18px; letter-spacing: -0.01em; }
-  .pf-card__body p { margin-top: 8px; color: var(--text-muted); font-size: 15px; }
+  .pf-card__media--web img { object-fit: contain; }
+  .pf-card__body { padding: 22px 24px 24px; }
+  .pf-card__body h4 { font-size: 19px; letter-spacing: -0.01em; }
+  .pf-card__desc { margin-top: 6px; color: var(--text-muted); font-size: 15px; }
+  .pf-card__bullets { margin: 16px 0 0; padding: 0; list-style: none; display: grid; gap: 9px; }
+  .pf-card__bullets li { position: relative; padding-left: 20px; font-size: 14px; color: var(--text-muted); line-height: 1.45; }
+  .pf-card__bullets li::before { content: ''; position: absolute; left: 2px; top: 8px; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
+  .pf-card__result { margin-top: 16px; font-size: 14px; font-weight: 600; display: flex; flex-wrap: wrap; gap: 8px; align-items: baseline; }
+  .pf-card__result span { font-size: 11px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent); background: var(--accent-soft); padding: 3px 9px; border-radius: 999px; }
   .pf-card__tags { margin-top: 14px; display: flex; flex-wrap: wrap; gap: 8px; }
 
   .portfolio__empty {
