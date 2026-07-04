@@ -217,10 +217,14 @@ export const media: MediaItem[] = [
 
 export type PortfolioItem = { src: string; title: L; description: L; tags?: string[]; url?: string };
 
-// Наполняется скриншотами продуктов. Пример элемента:
-// { src: '/portfolio/sm-visor.jpg', title: { ru: 'SM Visor', en: 'SM Visor' },
+// Наполняется скриншотами продуктов.
+// web — горизонтальные (16:10), mobile — вертикальные (скриншоты телефонов).
+// Пример: { src: '/portfolio/sm-visor.jpg', title: { ru: 'SM Visor', en: 'SM Visor' },
 //   description: { ru: 'Распознавание товаров на полке', en: 'Shelf image recognition' }, tags: ['Computer Vision'] }
-export const portfolio: PortfolioItem[] = [];
+export const portfolio: { web: PortfolioItem[]; mobile: PortfolioItem[] } = {
+  web: [],
+  mobile: [],
+};
 
 export type Certificate = { src: string; title: L; issuer: L; year: string };
 

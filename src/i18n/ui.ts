@@ -30,9 +30,11 @@ export const ui = {
     contact: { ru: 'Контакты', en: 'Contact' },
   },
   portfolio: {
+    web: { ru: 'Веб-приложения', en: 'Web apps' },
+    mobile: { ru: 'Мобильные приложения', en: 'Mobile apps' },
     empty: {
-      ru: 'Раздел скоро наполнится скриншотами продуктов и разбором кейсов.',
-      en: 'This section will soon feature product screenshots and case breakdowns.',
+      ru: 'Скоро здесь появятся скриншоты и разбор кейсов.',
+      en: 'Screenshots and case breakdowns are coming soon.',
     },
   },
   media_kind: {
