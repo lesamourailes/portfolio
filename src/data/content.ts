@@ -59,7 +59,7 @@ export const experience: Experience[] = [
     company: { ru: 'Моя смена', en: 'My shifts LLC' },
     period: { ru: '2025 — настоящее время', en: '2025 — present' },
     role: { ru: 'Head of Product', en: 'Head of Product' },
-    location: { ru: 'Москва, Россия', en: 'Moscow' },
+    location: { ru: 'Москва, Россия', en: 'Domestic' },
     summary: {
       ru: 'Запуск интеграционного продукта по подработке совместно с лидером рынка hh.ru (аналог Indeed Flex), MAU 1M+.',
       en: 'Launched an integration gig-work product together with market leader hh.ru (analogue of Indeed Flex), 1M+ MAU.',
@@ -152,8 +152,8 @@ export const communities: Community[] = [
 
 export const education = [
   {
-    school: { ru: 'Московский финансово-промышленный университет (МФПУ)', en: 'Moscow University of Finance and Industry' },
-    degree: { ru: 'Финансовый менеджмент (бакалавр)', en: 'Financial management (BA equivalent)' },
+    school: { ru: 'Московский финансово-промышленный университет', en: 'University of Finance and Industry' },
+    degree: { ru: 'Финансовый менеджмент', en: 'Financial management, BA equivalent' },
     period: '2009 — 2012',
   },
   {
@@ -224,9 +224,9 @@ export const certificates: Certificate[] = [
   { src: '/certificates/productcamp-2025.png', title: { ru: 'ProductCamp', en: 'ProductCamp' }, issuer: { ru: 'Благодарственное письмо', en: 'Letter of appreciation' }, year: '2025' },
   { src: '/certificates/pm-in-it.jpg', title: { ru: 'Project Management in IT', en: 'Project Management in IT' }, issuer: { ru: 'Binary District', en: 'Binary District' }, year: '2019' },
   { src: '/certificates/itil.png', title: { ru: 'Повышение квалификации', en: 'Professional development' }, issuer: { ru: 'ITIL Foundation', en: 'ITIL Foundation' }, year: '2018' },
-  { src: '/certificates/dev-basics.jpg', title: { ru: 'Основы программирования', en: 'Programming fundamentals' }, issuer: { ru: 'МГТУ им. Баумана', en: 'Bauman MSTU' }, year: '2016' },
-  { src: '/certificates/java-se8-l1.jpg', title: { ru: 'Java SE 8. Уровень 1', en: 'Java SE 8. Level 1' }, issuer: { ru: 'МГТУ им. Баумана', en: 'Bauman MSTU' }, year: '2016' },
-  { src: '/certificates/java-se8-l2.jpg', title: { ru: 'Java SE. Уровень 2', en: 'Java SE. Level 2' }, issuer: { ru: 'МГТУ им. Баумана', en: 'Bauman MSTU' }, year: '2016' },
   { src: '/certificates/lambda.png', title: { ru: 'Лямбда-выражения в Java 8', en: 'Lambda expressions in Java 8' }, issuer: { ru: 'МГТУ им. Баумана', en: 'Bauman MSTU' }, year: '2016' },
+  { src: '/certificates/dev-basics.jpg', title: { ru: 'Основы программирования', en: 'Programming fundamentals' }, issuer: { ru: 'МГТУ им. Баумана', en: 'Bauman MSTU' }, year: '2015' },
+  { src: '/certificates/java-se8-l1.jpg', title: { ru: 'Java SE 8. Уровень 1', en: 'Java SE 8. Level 1' }, issuer: { ru: 'МГТУ им. Баумана', en: 'Bauman MSTU' }, year: '2015' },
+  { src: '/certificates/java-se8-l2.jpg', title: { ru: 'Java SE. Уровень 2', en: 'Java SE. Level 2' }, issuer: { ru: 'МГТУ им. Баумана', en: 'Bauman MSTU' }, year: '2015' },
   { src: '/certificates/c-lang.jpg', title: { ru: 'Язык программирования C', en: 'C programming language' }, issuer: { ru: 'МГТУ им. Баумана', en: 'Bauman MSTU' }, year: '2015' },
 ];
