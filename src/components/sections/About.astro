@@ -7,29 +7,31 @@ const { locale } = Astro.props;
 const intro = about[locale];
 ---
 <section class="section" id="about">
-  <div class="container about">
-    <div class="about__intro reveal">
-      <span class="eyebrow">{t(ui.sections.about, locale)}</span>
-      {intro.paragraphs.map((p) => <p class="about__p">{p}</p>)}
-      {intro.bullets.length > 0 && (
-        <ul class="about__list">
-          {intro.bullets.map((b) => <li>{b}</li>)}
-        </ul>
-      )}
-    </div>
+  <div class="container">
+    <span class="eyebrow reveal">{t(ui.sections.about, locale)}</span>
+    <div class="about">
+      <div class="about__intro reveal">
+        {intro.paragraphs.map((p) => <p class="about__p">{p}</p>)}
+        {intro.bullets.length > 0 && (
+          <ul class="about__list">
+            {intro.bullets.map((b) => <li>{b}</li>)}
+          </ul>
+        )}
+      </div>
 
-    <aside class="about__edu reveal">
-      <h3 class="about__edu-title">{t(ui.sections.education, locale)}</h3>
-      <ul>
-        {education.map((e) => (
-          <li>
-            <span class="about__edu-period">{e.period}</span>
-            <span class="about__edu-school">{t(e.school, locale)}</span>
-            <span class="about__edu-degree">{t(e.degree, locale)}</span>
-          </li>
-        ))}
-      </ul>
-    </aside>
+      <aside class="about__edu reveal">
+        <h3 class="about__edu-title">{t(ui.sections.education, locale)}</h3>
+        <ul>
+          {education.map((e) => (
+            <li>
+              <span class="about__edu-period">{e.period}</span>
+              <span class="about__edu-school">{t(e.school, locale)}</span>
+              <span class="about__edu-degree">{t(e.degree, locale)}</span>
+            </li>
+          ))}
+        </ul>
+      </aside>
+    </div>
   </div>
 </section>
 
