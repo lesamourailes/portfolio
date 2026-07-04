@@ -304,7 +304,7 @@ export const portfolio: { web: PortfolioItem[]; mobile: PortfolioItem[] } = {
         { ru: 'Автоматическая отбраковка', en: 'Automatic rejection of defects' },
         { ru: 'Подстраивается под скорость движения ленты', en: 'Adapts to the conveyor belt speed' },
       ],
-      result: { ru: '99.9% товара без брака, исключение репутационных издержек', en: '99.9% defect-free output, eliminating reputational costs' },
+      result: { ru: 'На 99.9% чистая партия', en: '99.9% clean batch' },
     },
     {
       src: '/portfolio/zig-zag.png',
@@ -312,8 +312,8 @@ export const portfolio: { web: PortfolioItem[]; mobile: PortfolioItem[] } = {
       description: { ru: 'Автоматически распределяет магазины по кластерам и исполнителям', en: 'Automatically distributes stores across clusters and field reps' },
       bullets: [
         { ru: 'Исходные данные: справочник магазинов и исполнителей', en: 'Input data: directory of stores and field reps' },
-        { ru: 'Учитывает частоту посещений, категорию и десятки других атрибутов', en: 'Accounts for visit frequency, category and dozens of other attributes' },
-        { ru: 'Автоматический перерасчёт при выбывании сотрудника или магазина', en: 'Automatic recalculation when a rep or store drops out' },
+        { ru: 'Учитывает частоту посещений и десятки других атрибутов', en: 'Accounts for visit frequency and dozens of other attributes' },
+        { ru: 'Авто перерасчёт при выбывании сотрудника или магазина', en: 'Auto recalculation when a rep or store drops out' },
       ],
       result: { ru: 'Оптимизация ФОТ на 6%, TimeTravel на 12%', en: '6% payroll cost optimization, 12% less travel time' },
     },
