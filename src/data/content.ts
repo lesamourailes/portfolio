@@ -218,6 +218,8 @@ export const media: MediaItem[] = [
 export type PortfolioItem = {
   src: string;
   srcEn?: string; // локализованная версия скриншота (если есть)
+  preview?: string; // квадратное превью для карточки (полное фото — в лайтбоксе)
+  previewEn?: string;
   title: L;
   description: L;
   bullets?: L[];
@@ -321,6 +323,7 @@ export const portfolio: { web: PortfolioItem[]; mobile: PortfolioItem[] } = {
   mobile: [
     {
       src: '/portfolio/sfa-mobile.png',
+      preview: '/portfolio/sfa-preview.png',
       title: { ru: 'SFA', en: 'SFA' },
       description: { ru: 'Система автоматизации полевого персонала', en: 'Field force automation system' },
       bullets: [
@@ -331,17 +334,19 @@ export const portfolio: { web: PortfolioItem[]; mobile: PortfolioItem[] } = {
     },
     {
       src: '/portfolio/image-recognition.png',
-      title: { ru: 'Распознавание товара на полке', en: 'Shelf image recognition' },
-      description: { ru: 'Система автоматизации полевого персонала', en: 'Field force automation system' },
+      preview: '/portfolio/image-recognition-preview.png',
+      title: { ru: 'Image recognition', en: 'Image recognition' },
+      description: { ru: 'Распознавание товара на полке', en: 'Shelf image recognition' },
       bullets: [
-        { ru: 'Маршрутизация и GPS-контроль', en: 'Routing and GPS control' },
-        { ru: 'Конструктор KPI и анкетирование', en: 'KPI builder and surveys' },
-        { ru: 'Распознавание товара на полке', en: 'Shelf image recognition' },
+        { ru: 'Склейка и проверка на охват категории', en: 'Stitching and category-coverage check' },
+        { ru: 'Офлайн режим в случае отсутствия интернета', en: 'Offline mode when there is no internet' },
+        { ru: 'Точность 98+%', en: '98+% accuracy' },
       ],
     },
     {
       src: '/portfolio/my-shifts.jpg',
-      title: { ru: 'Интеграция с HeadHunter', en: 'HeadHunter integration' },
+      preview: '/portfolio/my-shifts-preview.jpg',
+      title: { ru: 'Интеграция с hh.ru', en: 'hh.ru integration' },
       description: { ru: 'WebView в разделе «Подработка»', en: 'WebView in the “Gig work” section' },
       bullets: [
         { ru: 'Бронирование смен пользователями hh.ru', en: 'Shift booking by hh.ru users' },
@@ -352,6 +357,8 @@ export const portfolio: { web: PortfolioItem[]; mobile: PortfolioItem[] } = {
     {
       src: '/portfolio/pulse-ru.png',
       srcEn: '/portfolio/pulse-en.png',
+      preview: '/portfolio/pulse-ru-preview.png',
+      previewEn: '/portfolio/pulse-en-preview.png',
       title: { ru: 'Pulse', en: 'Pulse' },
       description: { ru: 'AI-ассистент любого сотрудника компании', en: 'AI assistant for any company employee' },
       bullets: [
