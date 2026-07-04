@@ -230,7 +230,7 @@ export type Photo = { src: string; caption?: L };
 
 // Фотографии с коллегами и мероприятий (без подписей). Порядок = порядок вывода.
 export const photos: Photo[] = [
-  { src: '/gallery/1.jpg' },
+  { src: '/gallery/9.jpg' },
   { src: '/gallery/2.jpg' },
   { src: '/gallery/3.jpg' },
   { src: '/gallery/4.jpg' },
@@ -238,7 +238,6 @@ export const photos: Photo[] = [
   { src: '/gallery/6.jpg' },
   { src: '/gallery/7.jpg' },
   { src: '/gallery/8.jpg' },
-  { src: '/gallery/9.jpg' },
 ];
 
 export type Certificate = { src: string; title: L; issuer: L; year: string };
