@@ -120,7 +120,7 @@ const groups = [
 
   .pf-grid { display: grid; gap: 24px; }
   .pf-grid--web { grid-template-columns: repeat(2, 1fr); }
-  .pf-grid--mobile { grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); }
+  .pf-grid--mobile { grid-template-columns: repeat(4, 1fr); }
 
   .pf-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; transition: border-color 0.25s ease; }
   .pf-card:hover { border-color: var(--border-strong); }
@@ -176,7 +176,7 @@ const groups = [
 
   @media (max-width: 780px) {
     .pf-grid--web { grid-template-columns: 1fr; }
-    .pf-grid--mobile { grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); }
+    .pf-grid--mobile { grid-template-columns: repeat(2, 1fr); }
   }
   @media (max-width: 480px) {
     .lightbox { padding: 16px; }
