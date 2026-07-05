@@ -63,6 +63,7 @@ export const about: Record<Locale, { paragraphs: string[]; bullets: string[] }> 
 
 export type Experience = {
   company: L;
+  logo: string;
   period: L;
   role: L;
   location: L;
@@ -74,6 +75,7 @@ export type Experience = {
 export const experience: Experience[] = [
   {
     company: { ru: 'Моя смена', en: 'My shifts LLC' },
+    logo: '/logos/my-shifts.png',
     period: { ru: '2025 — настоящее время', en: '2025 — present' },
     role: { ru: 'Head of Product', en: 'Head of Product' },
     location: { ru: 'Москва, Россия', en: 'Domestic' },
@@ -91,6 +93,7 @@ export const experience: Experience[] = [
   },
   {
     company: { ru: 'SmartMerch', en: 'SmartMerch LLC' },
+    logo: '/logos/smartmerch.png',
     period: { ru: '2021 — 2025', en: '2021 — 2025' },
     role: { ru: 'Head of Product', en: 'Head of Product' },
     location: { ru: 'Россия / международные рынки', en: 'International markets' },
@@ -108,6 +111,7 @@ export const experience: Experience[] = [
   },
   {
     company: { ru: 'IDS Borjomi', en: 'IDS Borjomi LLC' },
+    logo: '/logos/borjomi.jpg',
     period: { ru: '2016 — 2021', en: '2016 — 2021' },
     role: { ru: 'Product Owner / IT Business Partner', en: 'Product Owner / IT Business Partner' },
     location: { ru: 'Россия, Украина, Беларусь', en: 'International markets' },

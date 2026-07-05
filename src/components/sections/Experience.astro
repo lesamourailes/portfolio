@@ -16,9 +16,12 @@ const { locale } = Astro.props;
       {experience.map((job) => (
         <article class="exp__card reveal">
           <div class="exp__head">
-            <div>
-              <h3 class="exp__company">{t(job.company, locale)}</h3>
-              <p class="exp__role">{t(job.role, locale)}</p>
+            <div class="exp__title">
+              <div class="exp__logo"><img src={job.logo} alt={t(job.company, locale)} loading="lazy" /></div>
+              <div>
+                <h3 class="exp__company">{t(job.company, locale)}</h3>
+                <p class="exp__role">{t(job.role, locale)}</p>
+              </div>
             </div>
             <div class="exp__meta">
               <span class="exp__period">{t(job.period, locale)}</span>
@@ -43,7 +46,10 @@ const { locale } = Astro.props;
   .exp__card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 34px; transition: border-color 0.25s ease, transform 0.25s ease; }
   .exp__card:hover { border-color: var(--border-strong); }
 
-  .exp__head { display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; align-items: baseline; }
+  .exp__head { display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; align-items: flex-start; }
+  .exp__title { display: flex; align-items: center; gap: 16px; }
+  .exp__logo { flex: none; width: 54px; height: 54px; border-radius: 12px; background: #fff; border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; padding: 8px; }
+  .exp__logo img { max-width: 100%; max-height: 100%; object-fit: contain; }
   .exp__company { font-size: 26px; letter-spacing: -0.02em; }
   .exp__role { margin-top: 4px; font-weight: 600; color: var(--accent); font-size: 16px; }
   .exp__meta { display: flex; flex-direction: column; text-align: right; gap: 2px; }
