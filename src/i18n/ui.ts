@@ -73,7 +73,7 @@ export const ui = {
     eyebrow: { ru: 'Форматы работы', en: 'Ways to work' },
     heading: { ru: 'Как я могу помочь?', en: 'How can I help?' },
     fit: { ru: 'Когда подходит', en: 'When it fits' },
-    does: { ru: 'Что делаю', en: 'What I do' },
+    does: { ru: 'Что сделаю', en: 'What I’ll do' },
     discuss: { ru: 'Обсудить', en: 'Discuss' },
   },
 } as const;
