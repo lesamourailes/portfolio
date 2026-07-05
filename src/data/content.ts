@@ -8,12 +8,12 @@ export const profile = {
     en: 'Head of Product',
   },
   tagline: {
-    ru: { lead: 'От 0→1 до ', accent: 'кратного роста выручки' },
-    en: { lead: 'From 0→1 to ', accent: 'multiplied revenue' },
+    ru: { lead: 'От идеи до ', accent: 'кратного роста выручки' },
+    en: { lead: 'From idea to ', accent: 'multiplied revenue' },
   },
   summary: {
-    ru: '10 лет в продуктовом менеджменте — от IT-стартапов до крупных корпораций. Помогаю, когда продукт не растёт, буксует цифровая трансформация или пора пересобрать продуктовый портфель.',
-    en: '10 years in product management — from IT startups to large corporations. I step in when a product stalls, digital transformation drags, or the product portfolio needs a rebuild.',
+    ru: '10 лет в продуктовом менеджменте — от IT-стартапов до крупных корпораций. Помогаю пересобрать продуктовый портфель, запустить новый продукт и повлиять на ключевые метрики роста.',
+    en: '10 years in product management — from IT startups to large corporations. I help rebuild the product portfolio, launch a new product and move the key growth metrics.',
   },
 };
 
