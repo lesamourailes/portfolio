@@ -1,5 +1,6 @@
 ---
 import Hero from './sections/Hero.astro';
+import Companies from './sections/Companies.astro';
 import About from './sections/About.astro';
 import Experience from './sections/Experience.astro';
 import Skills from './sections/Skills.astro';
@@ -14,6 +15,7 @@ interface Props { locale: Locale; }
 const { locale } = Astro.props;
 ---
 <Hero locale={locale} />
+<Companies locale={locale} />
 <About locale={locale} />
 <Experience locale={locale} />
 <Skills locale={locale} />

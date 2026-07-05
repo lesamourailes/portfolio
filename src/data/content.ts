@@ -8,12 +8,12 @@ export const profile = {
     en: 'Head of Product',
   },
   tagline: {
-    ru: { lead: 'Создаю продукты, ', accent: 'которые меняют мир' },
-    en: { lead: 'I create products ', accent: 'that change the world' },
+    ru: { lead: 'От 0→1 до ', accent: 'кратного роста выручки' },
+    en: { lead: 'From 0→1 to ', accent: 'multiplied revenue' },
   },
   summary: {
-    ru: '10 лет в продуктовом менеджменте: от IT-стартапов до крупных корпораций. Запускаю продукты с измеримым эффектом: рост выручки, миллионы пользователей и первые в стране технологические внедрения.',
-    en: '10 years in product management. From an FMCG leader to IT startups — I launch products with measurable impact: revenue growth, millions of users, and country-first tech rollouts.',
+    ru: '10 лет в продуктовом менеджменте — от IT-стартапов до крупных корпораций. Помогаю, когда продукт не растёт, буксует цифровая трансформация или пора пересобрать продуктовый портфель.',
+    en: '10 years in product management — from IT startups to large corporations. I step in when a product stalls, digital transformation drags, or the product portfolio needs a rebuild.',
   },
 };
 
@@ -23,6 +23,13 @@ export const contacts = {
   linkedin: 'https://www.linkedin.com/in/artur-markarian/',
   getmentor: 'https://getmentor.dev/mentor/artur-markarian-5874',
 };
+
+export const companies = [
+  { src: '/logos/hh.png', name: 'hh.ru' },
+  { src: '/logos/borjomi.jpg', name: 'IDS Borjomi' },
+  { src: '/logos/smartmerch.png', name: 'SmartMerch' },
+  { src: '/logos/my-shifts.png', name: 'Моя смена' },
+];
 
 export const stats: { value: L; label: L }[] = [
   { value: { ru: '10 лет', en: '10 years' }, label: { ru: 'в продуктовой разработке', en: 'in product development' } },
@@ -396,9 +403,4 @@ export const certificates: Certificate[] = [
   { src: '/certificates/productcamp-2025.png', title: { ru: 'ProductCamp', en: 'ProductCamp' }, issuer: { ru: 'Благодарственное письмо', en: 'Letter of appreciation' }, year: '2025' },
   { src: '/certificates/pm-in-it.jpg', title: { ru: 'Project Management in IT', en: 'Project Management in IT' }, issuer: { ru: 'Binary District', en: 'Binary District' }, year: '2019' },
   { src: '/certificates/itil.png', title: { ru: 'Повышение квалификации', en: 'Professional development' }, issuer: { ru: 'ITIL Foundation', en: 'ITIL Foundation' }, year: '2018' },
-  { src: '/certificates/lambda.png', title: { ru: 'Лямбда-выражения в Java 8', en: 'Lambda expressions in Java 8' }, issuer: { ru: 'МГТУ им. Баумана', en: 'Bauman MSTU' }, year: '2016' },
-  { src: '/certificates/dev-basics.jpg', title: { ru: 'Основы программирования', en: 'Programming fundamentals' }, issuer: { ru: 'МГТУ им. Баумана', en: 'Bauman MSTU' }, year: '2015' },
-  { src: '/certificates/java-se8-l1.jpg', title: { ru: 'Java SE 8. Уровень 1', en: 'Java SE 8. Level 1' }, issuer: { ru: 'МГТУ им. Баумана', en: 'Bauman MSTU' }, year: '2015' },
-  { src: '/certificates/java-se8-l2.jpg', title: { ru: 'Java SE. Уровень 2', en: 'Java SE. Level 2' }, issuer: { ru: 'МГТУ им. Баумана', en: 'Bauman MSTU' }, year: '2015' },
-  { src: '/certificates/c-lang.jpg', title: { ru: 'Язык программирования C', en: 'C programming language' }, issuer: { ru: 'МГТУ им. Баумана', en: 'Bauman MSTU' }, year: '2015' },
 ];

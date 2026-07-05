@@ -67,6 +67,7 @@ export const ui = {
     show: { ru: 'Показать ещё', en: 'Show more' },
     less: { ru: 'Свернуть', en: 'Show less' },
   },
+  companies: { ru: 'Компании и партнёры', en: 'Companies & partners' },
 } as const;
 
 export function t(entry: Record<Locale, string>, locale: Locale): string {
