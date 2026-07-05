@@ -25,10 +25,10 @@ export const contacts = {
 };
 
 export const companies = [
-  { src: '/logos/hh.png', name: 'hh.ru' },
-  { src: '/logos/borjomi.jpg', name: 'IDS Borjomi' },
-  { src: '/logos/smartmerch.png', name: 'SmartMerch' },
-  { src: '/logos/my-shifts.png', name: 'Моя смена' },
+  { src: '/logos/hh.png', name: 'hh.ru', domain: 'HR Tech' },
+  { src: '/logos/borjomi.jpg', name: 'IDS Borjomi', domain: 'FMCG' },
+  { src: '/logos/smartmerch.png', name: 'SmartMerch', domain: 'IT B2B' },
+  { src: '/logos/my-shifts.png', name: 'Моя смена', domain: 'IT B2C' },
 ];
 
 export const stats: { value: L; label: L }[] = [
