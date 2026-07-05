@@ -61,6 +61,47 @@ export const about: Record<Locale, { paragraphs: string[]; bullets: string[] }> 
   },
 };
 
+export type Service = { title: L; promise: L; fit: L; does: L[]; anchor: L };
+
+export const services: Service[] = [
+  {
+    title: { ru: 'Fractional / Interim CPO', en: 'Fractional / Interim CPO' },
+    promise: { ru: 'Сильный продуктовый лидер в команде — без найма в штат', en: 'A senior product leader on your team — without a full-time hire' },
+    fit: { ru: 'Продукт есть, но нет лидера уровня CPO: стратегия размыта, команда без вектора, роадмап реактивный.', en: 'You have a product but no CPO-level lead: strategy is fuzzy, the team lacks direction, the roadmap is reactive.' },
+    does: [
+      { ru: 'Продуктовая стратегия и roadmap', en: 'Product strategy and roadmap' },
+      { ru: 'Процессы: discovery, приоритизация, дерево метрик', en: 'Processes: discovery, prioritization, metrics tree' },
+      { ru: 'Развитие и лидерство команды (3–5+)', en: 'Growing and leading the team (3–5+)' },
+      { ru: 'Ответственность за P&L и метрики роста', en: 'Ownership of P&L and growth metrics' },
+    ],
+    anchor: { ru: 'В SmartMerch так вырастил линейку с 1 до 6 продуктов и +62% MRR', en: 'At SmartMerch this grew the portfolio 1→6 products and +62% MRR' },
+  },
+  {
+    title: { ru: 'Продуктовый аудит и стратегия', en: 'Product audit & strategy' },
+    promise: { ru: 'Разбираемся, почему продукт не растёт — и что с этим делать', en: 'We find out why the product isn’t growing — and what to do about it' },
+    fit: { ru: 'Метрики встали, воронка течёт, гипотез много — приоритетов нет.', en: 'Metrics have stalled, the funnel leaks, plenty of hypotheses — no priorities.' },
+    does: [
+      { ru: 'Аудит продукта, метрик и unit-экономики', en: 'Audit of product, metrics and unit economics' },
+      { ru: 'Анализ воронки и CustDev', en: 'Funnel analysis and customer development' },
+      { ru: 'Карта точек роста и дерево метрик', en: 'Growth-opportunity map and metrics tree' },
+      { ru: 'Приоритизированный план (RICE) с прогнозом эффекта', en: 'Prioritized plan (RICE) with an impact forecast' },
+    ],
+    anchor: { ru: 'Ускорял воронку на 21% и поднимал конверсию верха на 15%', en: 'Sped up the funnel by 21% and raised top-of-funnel conversion by 15%' },
+  },
+  {
+    title: { ru: 'Запуск продукта под ключ', en: 'End-to-end product launch' },
+    promise: { ru: 'От идеи и гипотезы до продукта с первыми платящими клиентами', en: 'From idea and hypothesis to a product with its first paying customers' },
+    fit: { ru: 'Есть идея или ниша, но нет ресурса и экспертизы довести до запуска.', en: 'You have an idea or a niche, but lack the resources and expertise to get it launched.' },
+    does: [
+      { ru: 'Валидация спроса: TAM–SAM–SOM, CustDev', en: 'Demand validation: TAM–SAM–SOM, customer development' },
+      { ru: 'Unit-экономика и бизнес-модель', en: 'Unit economics and business model' },
+      { ru: 'MVP и go-to-market', en: 'MVP and go-to-market' },
+      { ru: 'Первые продажи и сборка команды', en: 'First sales and team assembly' },
+    ],
+    anchor: { ru: 'В «Моей смене» за 3 месяца запустил новое направление; совместный с hh.ru продукт — 1 млн MAU', en: 'At My Shift launched a new product line in 3 months; a joint product with hh.ru — 1M MAU' },
+  },
+];
+
 export type Experience = {
   company: L;
   logo: string;

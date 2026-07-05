@@ -6,6 +6,7 @@ export const defaultLocale: Locale = 'ru';
 export const ui = {
   nav: {
     about: { ru: 'Обо мне', en: 'About' },
+    services: { ru: 'Услуги', en: 'Services' },
     experience: { ru: 'Опыт', en: 'Experience' },
     skills: { ru: 'Навыки', en: 'Skills' },
     portfolio: { ru: 'Портфолио', en: 'Portfolio' },
@@ -68,6 +69,13 @@ export const ui = {
     less: { ru: 'Свернуть', en: 'Show less' },
   },
   companies: { ru: 'Компании и партнёры', en: 'Companies & partners' },
+  services: {
+    eyebrow: { ru: 'Форматы работы', en: 'Ways to work' },
+    heading: { ru: 'Как я могу помочь?', en: 'How can I help?' },
+    fit: { ru: 'Когда подходит', en: 'When it fits' },
+    does: { ru: 'Что делаю', en: 'What I do' },
+    discuss: { ru: 'Обсудить', en: 'Discuss' },
+  },
 } as const;
 
 export function t(entry: Record<Locale, string>, locale: Locale): string {
