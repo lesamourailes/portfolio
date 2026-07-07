@@ -29,6 +29,7 @@ export const ui = {
     communities: { ru: 'Ассоциации', en: 'Associations' },
     media: { ru: 'СМИ обо мне', en: 'Media' },
     certificates: { ru: 'Сертификаты', en: 'Certificates' },
+    testimonials: { ru: 'Отзывы', en: 'Testimonials' },
     gallery: { ru: 'Галерея', en: 'Gallery' },
     contact: { ru: 'Контакты', en: 'Contact' },
   },

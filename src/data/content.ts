@@ -102,6 +102,39 @@ export const services: Service[] = [
   },
 ];
 
+export type Testimonial = { quote: L; name: string; role: L; company: string };
+
+// ПРИМЕРЫ-ЗАГЛУШКИ. Заменить на реальные отзывы (с настоящими именами/компаниями) перед публикацией.
+export const testimonials: Testimonial[] = [
+  {
+    quote: {
+      ru: 'Продукт стагнировал больше года. Артур за квартал пересобрал стратегию и воронку — ключевая метрика выросла на 15%. Мыслит как владелец бизнеса, а не исполнитель.',
+      en: 'The product had stalled for over a year. In a quarter Artur rebuilt the strategy and funnel — the key metric grew 15%. He thinks like a business owner, not a contractor.',
+    },
+    name: 'Имя Фамилия',
+    role: { ru: 'CEO', en: 'CEO' },
+    company: 'Компания',
+  },
+  {
+    quote: {
+      ru: 'Собрал продукт с нуля и довёл до первых платящих клиентов за 3 месяца. Редкое сочетание продуктовой стратегии и умения доводить до результата.',
+      en: 'Built a product from scratch and got it to first paying customers in 3 months. A rare mix of product strategy and execution.',
+    },
+    name: 'Имя Фамилия',
+    role: { ru: 'Основатель', en: 'Founder' },
+    company: 'Компания',
+  },
+  {
+    quote: {
+      ru: 'Настроил продуктовые процессы и метрики в команде, где их не было. Через полгода команда работает автономно и опирается на данные.',
+      en: 'Set up product processes and metrics in a team that had none. Six months on, the team runs autonomously and data-driven.',
+    },
+    name: 'Имя Фамилия',
+    role: { ru: 'CTO', en: 'CTO' },
+    company: 'Компания',
+  },
+];
+
 export type Experience = {
   company: L;
   logo: string;

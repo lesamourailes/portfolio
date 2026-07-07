@@ -1,0 +1,54 @@
+---
+import { testimonials } from '../../data/content';
+import { ui, t } from '../../i18n/ui';
+import type { Locale } from '../../data/content';
+interface Props { locale: Locale; }
+const { locale } = Astro.props;
+const initials = (name: string) => name.split(' ').map((w) => w[0]).join('').slice(0, 2).toUpperCase();
+---
+<section class="section section--tight" id="testimonials">
+  <div class="container">
+    <div class="reveal">
+      <span class="eyebrow">{t(ui.sections.testimonials, locale)}</span>
+      <h2 class="section-title">{locale === 'ru' ? 'Что говорят коллеги' : 'What colleagues say'}</h2>
+    </div>
+
+    <div class="testimonials">
+      {testimonials.map((tst) => (
+        <figure class="tcard reveal">
+          <span class="tcard__mark" aria-hidden="true">“</span>
+          <blockquote class="tcard__quote">{t(tst.quote, locale)}</blockquote>
+          <figcaption class="tcard__author">
+            <span class="tcard__avatar" aria-hidden="true">{initials(tst.name)}</span>
+            <span class="tcard__meta">
+              <span class="tcard__name">{tst.name}</span>
+              <span class="tcard__role">{t(tst.role, locale)} · {tst.company}</span>
+            </span>
+          </figcaption>
+        </figure>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .testimonials { margin-top: 44px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .tcard {
+    position: relative; margin: 0; display: flex; flex-direction: column;
+    background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
+    padding: 30px 28px 26px;
+  }
+  .tcard__mark { position: absolute; top: 10px; right: 22px; font-size: 56px; line-height: 1; color: var(--accent); opacity: 0.18; font-family: Georgia, serif; }
+  .tcard__quote { margin: 0; font-size: 16px; line-height: 1.6; flex: 1; }
+  .tcard__author { display: flex; align-items: center; gap: 12px; margin-top: 22px; padding-top: 20px; border-top: 1px solid var(--border); }
+  .tcard__avatar {
+    flex: none; width: 44px; height: 44px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    background: var(--accent-soft); color: var(--accent); font-weight: 600; font-size: 14px;
+  }
+  .tcard__meta { display: flex; flex-direction: column; }
+  .tcard__name { font-weight: 600; }
+  .tcard__role { font-size: 13px; color: var(--text-muted); }
+
+  @media (max-width: 900px) { .testimonials { grid-template-columns: 1fr; } }
+</style>
