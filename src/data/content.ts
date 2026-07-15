@@ -220,28 +220,38 @@ export const skills: SkillGroup[] = [
   },
 ];
 
-export type Community = { title: L; detail: L; period: string };
+export type Community = { title: L; detail: L; period: string; logo: string };
 
 export const communities: Community[] = [
   {
     title: { ru: 'ProductCamp', en: 'ProductCamp' },
     detail: { ru: 'Участник сообщества; эксперт Карьерного трека', en: 'Community member; expert of the Career Track' },
     period: '2025',
+    logo: '/logos/productcamp.png',
   },
   {
     title: { ru: 'GlobalCIO. Ассоциация ИТ-директоров России', en: 'GlobalCIO. Association of IT Leaders' },
     detail: { ru: 'Член ассоциации, спикер отраслевых конференций', en: 'Member & speaker at industry conferences' },
     period: '2018',
+    logo: '/logos/globalcio.png',
   },
   {
     title: { ru: 'Хакатоны России', en: 'International hackathons award' },
     detail: { ru: 'Член экспертного совета жюри национальной премии', en: 'Member of the expert jury council' },
     period: '2026',
+    logo: '/logos/hackathons.svg',
+  },
+  {
+    title: { ru: 'Expinet', en: 'Expinet' },
+    detail: { ru: 'Член ассоциации, эксперт', en: 'Member of the association, expert' },
+    period: '2026',
+    logo: '/logos/expinet.svg',
   },
   {
     title: { ru: 'GetMentor', en: 'GetMentor' },
     detail: { ru: 'Ментор для продакт-менеджеров', en: 'Mentor for product managers' },
     period: '2025',
+    logo: '/logos/getmentor.jpg',
   },
 ];
 

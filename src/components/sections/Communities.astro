@@ -17,6 +17,7 @@ const items = byYearDesc(communities, (c) => c.period);
       {items.map((c) => (
         <article class="comm-card reveal">
           {c.period !== '—' && <span class="comm-card__period">{c.period}</span>}
+          <div class="comm-card__logo"><img src={c.logo} alt={t(c.title, locale)} loading="lazy" /></div>
           <h3>{t(c.title, locale)}</h3>
           <p>{t(c.detail, locale)}</p>
         </article>
@@ -28,8 +29,10 @@ const items = byYearDesc(communities, (c) => c.period);
 <style>
   .communities { margin-top: 44px; display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
   .comm-card { position: relative; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 28px; }
-  .comm-card__period { display: inline-block; margin-bottom: 12px; padding: 4px 12px; border-radius: 999px; background: var(--accent-soft); color: var(--accent); font-size: 13px; font-weight: 700; }
-  .comm-card h3 { font-size: 19px; letter-spacing: -0.01em; }
+  .comm-card__period { position: absolute; top: 24px; right: 24px; padding: 4px 12px; border-radius: 999px; background: var(--accent-soft); color: var(--accent); font-size: 13px; font-weight: 700; }
+  .comm-card__logo { display: inline-flex; align-items: center; justify-content: center; height: 48px; padding: 8px 12px; margin-bottom: 16px; background: #fff; border: 1px solid var(--border); border-radius: 10px; }
+  .comm-card__logo img { height: 100%; width: auto; max-width: 150px; object-fit: contain; }
+  .comm-card h3 { font-size: 19px; letter-spacing: -0.01em; padding-right: 60px; }
   .comm-card p { margin-top: 8px; color: var(--text-muted); }
   @media (max-width: 780px) { .communities { grid-template-columns: 1fr; } }
 </style>
