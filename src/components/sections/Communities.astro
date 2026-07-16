@@ -50,7 +50,8 @@ const groups = [
   .comm-card__top { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 40px; margin-bottom: 20px; }
   .comm-card__period { padding: 4px 12px; border-radius: 999px; background: var(--accent-soft); color: var(--accent); font-size: 13px; font-weight: 700; }
   .comm-card__logo { display: inline-flex; align-items: center; }
-  .comm-card__logo img { height: 34px; width: auto; max-width: 140px; object-fit: contain; }
+  /* Широкие вордмарки ограничиваем по ширине, иначе они перевешивают ряд оптически */
+  .comm-card__logo img { height: 34px; width: auto; max-width: 116px; object-fit: contain; }
   /* Знак встроен в собственный фон — показываем плиткой, а не «вырезкой» */
   .comm-card__logo--tile img { height: 40px; border-radius: 8px; border: 1px solid var(--border); }
   /* Одноцветный тёмный знак: в тёмной теме выворачиваем, hue-rotate возвращает акцентный цвет */
