@@ -232,7 +232,7 @@ export type Community = {
 export const communities: Community[] = [
   {
     title: { ru: 'ProductCamp', en: 'ProductCamp' },
-    detail: { ru: 'Участник сообщества; эксперт Карьерного трека', en: 'Community member; expert of the Career Track' },
+    detail: { ru: 'Участник сообщества, эксперт', en: 'Community member, expert' },
     period: '2025',
     logo: '/logos/productcamp.png',
     group: 'pro',
@@ -262,7 +262,7 @@ export const communities: Community[] = [
   },
   {
     title: { ru: 'GetMentor', en: 'GetMentor' },
-    detail: { ru: 'Ментор для продакт-менеджеров', en: 'Mentor for product managers' },
+    detail: { ru: 'Ментор продакт-менеджеров', en: 'Mentor for product managers' },
     period: '2025',
     logo: '/logos/getmentor.jpg',
     group: 'jury',
@@ -288,8 +288,8 @@ export type MediaItem = { title: L; source: string; year: string; url: string; k
 export const media: MediaItem[] = [
   {
     title: {
-      ru: 'Let’s go global: как создавать продукты, которые будут востребованы на зарубежных рынках',
-      en: 'Let’s go global: how to build products that will be in demand in international markets',
+      ru: 'Как создавать продукты, востребованные на зарубежных рынках',
+      en: 'How to build products that are in demand in international markets',
     },
     source: 'Biz360', year: '2026', kind: 'press',
     url: 'https://biz360.ru/materials/let-s-go-global-kak-sozdavat-produkty-kotorye-budut-vostrebovany-na-zarubezhnykh-rynkakh/',
@@ -376,13 +376,13 @@ export const portfolio: { web: PortfolioItem[]; mobile: PortfolioItem[] } = {
     {
       src: '/portfolio/zig-zag.png',
       title: { ru: 'Система автомаршрутизации', en: 'Auto-routing system' },
-      description: { ru: 'Автоматически распределяет магазины по кластерам и исполнителям', en: 'Automatically distributes stores across clusters and field reps' },
+      description: { ru: 'Распределяет визиты по кластерам и исполнителям', en: 'Distributes visits across clusters and field reps' },
       bullets: [
         { ru: 'Исходные данные: справочник магазинов и исполнителей', en: 'Input data: directory of stores and field reps' },
         { ru: 'Учитывает частоту посещений и десятки других атрибутов', en: 'Accounts for visit frequency and dozens of other attributes' },
         { ru: 'Авто перерасчёт при выбывании сотрудника или магазина', en: 'Auto recalculation when a rep or store drops out' },
       ],
-      result: { ru: 'Оптимизация ФОТ на 6%, TimeTravel на 12%', en: '6% payroll cost optimization, 12% less travel time' },
+      result: { ru: 'Оптимизация ФОТ на 6%, TravelTime на 12%', en: '6% payroll cost optimization, 12% less travel time' },
     },
     {
       src: '/portfolio/top-mt.png',
