@@ -220,7 +220,14 @@ export const skills: SkillGroup[] = [
   },
 ];
 
-export type Community = { title: L; detail: L; period: string; logo: string };
+// group:     'pro'    — профессиональные сообщества; 'jury' — жюри и менторство.
+// logoStyle: 'invert' — одноцветный тёмный знак, в тёмной теме инвертируется;
+//            'tile'   — фон встроен в сам знак, показываем плиткой со скруглением.
+export type Community = {
+  title: L; detail: L; period: string; logo: string;
+  group: 'pro' | 'jury';
+  logoStyle?: 'invert' | 'tile';
+};
 
 export const communities: Community[] = [
   {
@@ -228,30 +235,38 @@ export const communities: Community[] = [
     detail: { ru: 'Участник сообщества; эксперт Карьерного трека', en: 'Community member; expert of the Career Track' },
     period: '2025',
     logo: '/logos/productcamp.png',
+    group: 'pro',
+    logoStyle: 'invert',
   },
   {
     title: { ru: 'GlobalCIO. Ассоциация ИТ-директоров России', en: 'GlobalCIO. Association of IT Leaders' },
     detail: { ru: 'Член ассоциации, спикер отраслевых конференций', en: 'Member & speaker at industry conferences' },
     period: '2018',
     logo: '/logos/globalcio.png',
+    group: 'pro',
   },
   {
     title: { ru: 'Хакатоны России', en: 'International hackathons award' },
     detail: { ru: 'Член экспертного совета жюри национальной премии', en: 'Member of the expert jury council' },
     period: '2026',
     logo: '/logos/hackathons.svg',
+    group: 'jury',
   },
   {
     title: { ru: 'Expinet', en: 'Expinet' },
     detail: { ru: 'Член ассоциации, эксперт', en: 'Member of the association, expert' },
     period: '2026',
     logo: '/logos/expinet.svg',
+    group: 'pro',
+    logoStyle: 'invert',
   },
   {
     title: { ru: 'GetMentor', en: 'GetMentor' },
     detail: { ru: 'Ментор для продакт-менеджеров', en: 'Mentor for product managers' },
     period: '2025',
     logo: '/logos/getmentor.jpg',
+    group: 'jury',
+    logoStyle: 'tile',
   },
 ];
 

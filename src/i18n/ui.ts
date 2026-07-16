@@ -41,6 +41,10 @@ export const ui = {
       en: 'Screenshots and case breakdowns are coming soon.',
     },
   },
+  communities: {
+    pro: { ru: 'Профессиональные сообщества', en: 'Professional communities' },
+    jury: { ru: 'Жюри и менторство', en: 'Jury & mentorship' },
+  },
   gallery: {
     empty: {
       ru: 'Скоро здесь появятся фотографии с коллегами и мероприятий.',
