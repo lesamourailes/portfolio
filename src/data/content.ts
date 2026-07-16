@@ -239,8 +239,8 @@ export const communities: Community[] = [
     logoStyle: 'invert',
   },
   {
-    title: { ru: 'GlobalCIO. Ассоциация ИТ-директоров России', en: 'GlobalCIO. Association of IT Leaders' },
-    detail: { ru: 'Член ассоциации, спикер отраслевых конференций', en: 'Member & speaker at industry conferences' },
+    title: { ru: 'GlobalCIO', en: 'GlobalCIO' },
+    detail: { ru: 'Член ассоциации IT-директоров России', en: 'Member of the national association of IT directors' },
     period: '2018',
     logo: '/logos/globalcio.png',
     group: 'pro',
