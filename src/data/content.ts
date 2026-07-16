@@ -272,6 +272,14 @@ export type MediaItem = { title: L; source: string; year: string; url: string; k
 
 export const media: MediaItem[] = [
   {
+    title: {
+      ru: 'Let’s go global: как создавать продукты, которые будут востребованы на зарубежных рынках',
+      en: 'Let’s go global: how to build products that will be in demand in international markets',
+    },
+    source: 'Biz360', year: '2026', kind: 'press',
+    url: 'https://biz360.ru/materials/let-s-go-global-kak-sozdavat-produkty-kotorye-budut-vostrebovany-na-zarubezhnykh-rynkakh/',
+  },
+  {
     title: { ru: 'Персона: Маркарян Артур Рубенович', en: 'Profile: Artur Markarian' },
     source: 'TAdviser', year: '', kind: 'profile',
     url: 'https://www.tadviser.ru/index.php/%D0%9F%D0%B5%D1%80%D1%81%D0%BE%D0%BD%D0%B0:%D0%9C%D0%B0%D1%80%D0%BA%D0%B0%D1%80%D1%8F%D0%BD_%D0%90%D1%80%D1%82%D1%83%D1%80_%D0%A0%D1%83%D0%B1%D0%B5%D0%BD%D0%BE%D0%B2%D0%B8%D1%87',
